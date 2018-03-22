@@ -1,0 +1,100 @@
+.slider {
+
+	&--main {
+		background: linear-gradient(to bottom, $main 10%, $white 60%);
+
+		padding: 28px 0;
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__arrow {
+		height: 43px;
+		width: 28px;
+
+		background: $black;
+
+		position: absolute;
+		top: 50%;
+
+		margin-top: -21px;
+
+		cursor: pointer;
+
+		&--left {
+			background: url('../img/arrows.png') no-repeat -3px 0;
+
+			left: -50px;
+		}
+
+		&--right {
+			background: url('../img/arrows.png') no-repeat -53px 0;
+
+			right: -50px;
+		}
+	}
+	
+	&__slide {
+		padding: 4px;
+
+		background: $white;
+		box-shadow: 0px 0px 3px 3px rgba(235,235,235,1);
+		border-radius: 3px;
+
+		position: relative;
+
+		&-info {
+			width: 350px;
+
+			font-size: 26px;
+
+			padding: 27px 30px;
+
+			background: rgba(247, 158, 55, .9);
+			color: $white;
+
+			position: absolute;
+			bottom: 30px;
+			left: 30px;
+		}
+
+		&-text {
+			font-family: $bold;
+
+			margin-bottom: 20px;
+		}
+	}
+
+	&__dots {
+		display: flex;
+
+		list-style: none;
+
+		padding-left: 0;
+		margin: 0;
+
+		position: absolute;
+		right: 30px;
+		bottom: 30px;
+
+		&-item {
+			width: 20px;
+			height: 20px;
+
+			background: $white;
+
+			border: 3px solid $white;
+			border-radius: 50%;
+
+			&--current {
+				background: $blue;
+			}
+
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+	}
+}

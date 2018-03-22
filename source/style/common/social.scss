@@ -1,0 +1,31 @@
+.social {
+	display: flex;
+
+	&__item {
+		display: block;
+		height: 40px;
+		width: 40px;
+
+		border-radius: 50%;
+	}
+
+	&__item:not(:last-of-type) {
+		margin-right: 10px;
+	}
+
+	&__item--vk {
+		background: url('../img/soc-icons.png') no-repeat 7px 10px, $white;
+	}
+
+	&__item--fb {
+		background: url('../img/soc-icons.png') no-repeat -28px 10px, $white;
+	}
+
+	&__item--ok {
+		background: url('../img/soc-icons.png') no-repeat -66px 10px, $white;
+	}
+
+	&__item--in {
+		background: url('../img/soc-icons.png') no-repeat -114px 10px, $white;
+	}
+}

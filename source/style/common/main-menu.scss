@@ -1,8 +1,6 @@
 .main-menu {
 	background: $white;
 
-	padding: 15px 0;
-
 	position: relative;
 
 	&__wrapper {
@@ -19,8 +17,16 @@
 		list-style: none;
 	}
 
+	&__item {
+		padding: 15px 0;
+	}
+
 	&__item:not(:last-child) {
 		margin-right: 27px;
+	}
+
+	&__item--parent:hover .submenu {
+		display: block;
 	}
 
 	&__link {

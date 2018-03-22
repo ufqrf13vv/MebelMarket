@@ -2,41 +2,49 @@ extends ../_template
 
 block variables
 	- var title = 'Главная'
-	- var iconsLeader = ['<div class="icon__leader"></div>']
-	- var iconsSale = ['<div class="icon__leader"></div>', '<div class="icon__sale">40%</div>']
-	- var iconsNew = ['<div class="icon__new"></div>']
+	- var iconsLeader = ['<div class="catalog__item-icon catalog__item-icon--leader"></div>']
+	- var iconsSale = ['<div class="catalog__item-icon catalog__item-icon--leader"></div>', '<div class="catalog__item-icon catalog__item-icon--discount">-40%</div>']
+	- var iconsNew = ['<div class="catalog__item-icon catalog__item-icon--new">Новинка</div>']
 
 block content
 	.slider.slider--main
-		.slider__slide
-			img.slider__image(src="img/slide1.jpg")
-			.slider__info
-				p 
-					strong Новое поступление постельного белья
-				p от 5 000 рублей.
-		.slider__slide
-			img.slider__image(src="img/slide1.jpg")
-			.slider__info
-				p 
-					strong Новое поступление постельного белья
-				p от 5 000 рублей.
-		.slider__slide
-			img.slider__image(src="img/slide1.jpg")
-			.slider__info
-				p 
-					strong Новое поступление постельного белья
-				p от 5 000 рублей.
+		.container
+			.slider__wrapper
+				.slider__arrow.slider__arrow--left
+				.slider__arrow.slider__arrow--right
+				.slider__slide
+					img.slider__image(src="/assets/img/slide.png")
+					.slider__slide-info
+						.slider__slide-text Новое поступление постельного белья
+						.slider__slide-price от 5000 рублей
+				ul.slider__dots
+					li.slider__dots-item
+					li.slider__dots-item.slider__dots-item--current
+					li.slider__dots-item
+					li.slider__dots-item
+		
 	section.section
-		.section__title Лидеры продаж
-		+catalogItems(catalogItems, iconsLeader)
+		.section__title 
+			.container
+				h2.main-title Лидеры продаж
+		.container
+			+catalogItems(catalogItems, iconsLeader)
 	section.section
-		.section__title Акции и скидки
-		+catalogItems(catalogItems, iconsSale)
+		.section__title 
+			.container
+				h2.main-title Акции и скидки
+		.container
+			+catalogItems(catalogItems, iconsSale)
 	section.section
-		.section__title Новинки
-		+catalogItems(catalogItems, iconsNew)
+		.section__title 
+			.container
+				h2.main-title Новинки
+		.container
+			+catalogItems(catalogItems, iconsNew)
 	section.section
-		.section__title Недавно вы смотрели
+		.section__title 
+			.container
+				h2.main-title Недавно вы смотрели
 		.slider.slider_viewed
 			.slider__slide
 				img.slider__image(src="img/slide1.jpg")

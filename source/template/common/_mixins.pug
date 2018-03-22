@@ -1,9 +1,9 @@
 - 
 	var catalogItems = [
-		{ img: 'img/catalog-item1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000', oldprice: '135 000' },
-		{ img: 'img/catalog-item1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000', oldprice: '135 000' },
-		{ img: 'img/catalog-item1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000', oldprice: '135 000' },
-		{ img: 'img/catalog-item1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000', oldprice: '135 000' }
+		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
+		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
+		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
+		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' }
 	];
 -
 	var catalogMenu = [
@@ -37,27 +37,26 @@ mixin catalogMenu(items)
 
 
 mixin catalogItems(items, icons, includePager)
-	.catalog-items
-		.catalog-items__items
-			each item in items
-				.catalog-items__item
-					if icons
-						.catalog-items__icons
-							each icon in icons
-								| !{icon}
-					.catalog-items__image
-						img(src=`${item.img}`)
-					.catalog-items__section #{item.section}
-					.catalog-items__name
-						a(href="#") #{item.name}
-					.catalog-items__prices
-						.catalog-items__price #{item.price}
+	.catalog
+		each item in items
+			.catalog__item
+				if icons
+					.catalog__item-icons
+						each icon in icons
+							| !{icon}
+				.catalog__item-image
+					img(src=`${item.img}`)
+				.catalog__item-description
+					.catalog__item-category #{item.section}
+					a.catalog__item-name(href="#") #{item.name}
+					.catalog__item-prices
+						.catalog__item-price #{item.price}
 						if item.oldprice
-							.catalog-items__price--old #{item.oldprice}
-					.catalog-items__links
-						a.catalog-items__link--cart(href="#") В корзину
-						a.catalog-items__link--favorite(href="#")
-						a.catalog-items__link--compare(href="#")
+							.catalog__item-oldprice #{item.oldprice}
+					.catalog__item-links
+						a.catalog__item-cart(href="#") В корзину
+						a.catalog__item-favorite(href="#")
+						a.catalog__item-compare(href="#")
 		if includePager
 			.catalog-items__pager
 				a.pager__item(href="#") 1
@@ -70,4 +69,4 @@ mixin catalogItems(items, icons, includePager)
 				.pager__item.pager__ellipsis
 				a.pager__item(href="#") 120
 		else
-			a.catalog-items__showmore(href="#") Показать еще
+			a.catalog__showmore(href="#") Показать еще

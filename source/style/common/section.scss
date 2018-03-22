@@ -1,0 +1,9 @@
+.section {
+	padding-top: 30px;
+
+	&__title {
+		border-bottom: 1px solid $grey;
+
+		margin-bottom: 30px;
+	}
+}

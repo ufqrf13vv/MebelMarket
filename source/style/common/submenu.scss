@@ -9,11 +9,15 @@
 	top: 46px;
 	left: 0;
 
+	display: none;
+
 	&__list {
 		padding: 0;
 		margin: 0;
 
 		list-style: none;
+		list-style-position: inside;
+		column-count: 5;
 	}
 
 	&__item:not(:last-of-type) {
@@ -26,7 +30,7 @@
 		text-decoration: none;
 
 		&:hover {
-			opacity: .7;
+			opacity: .6;
 		}
 	}
 }

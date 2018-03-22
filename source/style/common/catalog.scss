@@ -1,0 +1,153 @@
+.catalog {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	&__item {
+		width: 270px;
+
+		border: 1px solid $grey;
+		border-radius: 3px;
+
+		background: $white;
+
+		&-description {
+			padding: 15px 15px 20px 15px;
+		}
+
+		&-image {
+
+		}
+
+		&-icons {
+			display: flex;
+
+			padding-top: 10px;
+			padding-left: 10px;
+		}
+
+		&-icon {
+			font-size: 10px;
+
+			padding: 5px 14px;
+
+			border-radius: 4px;
+
+			color: $white;
+
+			&--discount {
+				background: $red;
+			}
+
+			&--new {
+				background: $orange;
+
+				text-transform: uppercase;
+			}
+		}
+
+		&-category {
+			text-align: center;
+			color: $lgrey;
+
+			margin-bottom: 15px;
+		}
+
+		&-name {
+			font-size: 16px;
+
+			color: $blue;
+
+			text-align: center;
+			text-decoration: none;
+		}
+
+		&-prices {
+			display: flex;
+			justify-content: space-between;
+
+			padding: 19px 0;
+
+			border-top: 1px solid $grey;
+			border-bottom: 1px solid $grey;
+		}
+
+		&-price {
+			font-size: 16px;
+		}
+
+		&-oldprice {
+			color: $lgrey;
+
+			text-decoration: line-through;
+		}
+
+		&-links {
+			display: flex;
+
+			padding-top: 19px;
+		}
+
+		&-cart {
+			font-size: 16px;
+
+			text-decoration: none;
+
+			color: $blue;
+
+			padding-left: 32px;
+
+			position: relative;
+
+			&::before {
+				content: '';
+
+				display: block;
+				width: 25px;
+				height: 25px;
+
+				background: url('../img/icons.png') no-repeat -112px 0;
+
+				position: absolute;
+				top: -6px;
+				left: 0;
+			}
+		}
+
+		&-favorite {
+			width: 25px;
+			height: 25px;
+
+			background: url('../img/icons.png') no-repeat -3px -4px;
+			
+			margin-left: auto;
+			margin-right: 20px;
+		}
+
+		&-compare {
+			width: 25px;
+			height: 25px;
+
+			background: url('../img/icons.png') no-repeat -76px -4px;
+		}
+	}
+
+	&__showmore {
+		display: block;
+
+		font-family: $bold;
+		font-size: 16px;
+
+		text-decoration: none;
+		text-transform: uppercase;
+
+		color: $white;
+
+		padding: 20px 220px;
+		margin: auto;
+		margin-top: 60px;
+
+		background: $orange;
+		border-radius: 4px;
+	}
+}

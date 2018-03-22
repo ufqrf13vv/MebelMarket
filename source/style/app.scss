@@ -3,7 +3,16 @@
 @import 'mixin';
 @import 'base';
 
+@import 'common/titles';
 @import 'common/header';
 @import 'common/search';
 @import 'common/main-menu';
 @import 'common/submenu';
+@import 'common/slider';
+@import 'common/section';
+@import 'common/catalog';
+
+@import 'common/recommendations';
+@import 'common/subscribe';
+@import 'common/social';
+@import 'common/footer';

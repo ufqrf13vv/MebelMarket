@@ -1,0 +1,30 @@
+extends ../_template
+
+block variables
+	- var title = 'Мебель'
+	- var iconsLeader = ['<div class="icon__leader"></div>']
+	- var iconsSale = ['<div class="icon__sale">40%</div>']
+
+block content
+	+breadcrumbs(['Главная', 'Мебель'])
+	h1 Мебель
+	.catalog
+		.catalog_left
+			+catalogMenu(catalogMenu)
+		.catalog-right
+			.catalog-section
+				.ads
+					.ads__item(style="background-image: url(img/ad1.jpg)")
+						.ads__text Новое поступление гарнитуров от 25 000 руб.
+					.ads__item(style="background-image: url(img/ad1.jpg)")
+						.ads__text Новое поступление гарнитуров от 25 000 руб.
+					.ads__item(style="background-image: url(img/ad1.jpg)")
+						.ads__text Новое поступление гарнитуров от 25 000 руб.
+					.ads__item(style="background-image: url(img/ad1.jpg)")
+						.ads__text Новое поступление гарнитуров от 25 000 руб.
+				section.section
+					.section__title Лидеры продаж
+					+catalogItems(catalogItems, iconsLeader)
+				section.section
+					.section__title Акции и скидки
+					+catalogItems(catalogItems, iconsSale)

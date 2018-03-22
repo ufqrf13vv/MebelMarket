@@ -1,0 +1,32 @@
+.submenu {
+	width: 100%;
+
+	padding: 27px 0;
+
+	background: $blue;
+
+	position: absolute;
+	top: 46px;
+	left: 0;
+
+	&__list {
+		padding: 0;
+		margin: 0;
+
+		list-style: none;
+	}
+
+	&__item:not(:last-of-type) {
+		margin-bottom: 15px;
+	}
+
+	&__link {
+		color: $white;
+
+		text-decoration: none;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}

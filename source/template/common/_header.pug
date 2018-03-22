@@ -1,0 +1,60 @@
+header.header
+	.headline
+		.container
+			.header__wrapper
+				.headline__title Интернет-гипермаркет подарков и товаров для дома
+				.headline__menu
+					a.headline__link(href="#") Оплата
+					a.headline__link(href="#") Доставка
+					a.headline__link(href="#") Сотрудничество
+				.headline__contacts
+					a.headline__phone(href="tel:88007007050") 8 (800) 700-70-50
+					a.headline__phone(href="tel:84953749915") 8 (495) 374-99-15
+					a.headline__link(href="#") Перезвонить мне
+	.header-main
+		.container
+			.header__wrapper.header__wrapper--main
+				a.logo(href="#")
+					img(src="/assets/img/logo.png", alt="logo")
+				form.search
+					input.search__input(type="text" placeholder="Найти среди более 5 000 товаров...")
+					input.search__submit(type="submit")
+				a.header__link.header__link--favorite(href="#") Избранное
+				a.header__link.header__link--compare(href="#") Сравнение
+				a.header__link.header__link--cart(href="#") Корзина
+				a.header__link(href="#")
+					img(src="/assets/img/user.png")
+	.main-menu
+		.container
+			.main-menu__wrapper
+				ul.main-menu__list
+					li.main-menu__item.main-menu__item--parent
+						a.main-menu__link(href="#") Мебель
+						.submenu
+							.container
+								+menu('submenu', ['Мягкая мебель', 'Мягкая мебель', 'Мягкая мебель', 'Мягкая мебель', 'Мягкая мебель', 'Мягкая мебель', 'Мягкая мебель', 'Мягкая мебель'])
+					li.main-menu__item
+						a.main-menu__link(href="#") Посуда
+					li.main-menu__item
+						a.main-menu__link(href="#") Интерьер
+					li.main-menu__item
+						a.main-menu__link(href="#") Текстиль
+					li.main-menu__item
+						a.main-menu__link(href="#") Детские товары
+					li.main-menu__item
+						a.main-menu__link(href="#") Подарки
+					li.main-menu__item
+						a.main-menu__link(href="#") Сувениры
+					li.main-menu__item
+						a.main-menu__link(href="#") Цветы
+					li.main-menu__item
+						a.main-menu__link(href="#") Дом и дача
+				ul.main-menu__list
+					li.main-menu__item
+						a.main-menu__link(href="#") Новинки
+					li.main-menu__item
+						a.main-menu__link(href="#") Акции
+					li.main-menu__item
+						a.main-menu__link(href="#") Страны
+					li.main-menu__item
+						a.main-menu__link(href="#") Серии

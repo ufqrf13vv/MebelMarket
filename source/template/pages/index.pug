@@ -1,0 +1,76 @@
+extends ../_template
+
+block variables
+	- var title = 'Главная'
+	- var iconsLeader = ['<div class="icon__leader"></div>']
+	- var iconsSale = ['<div class="icon__leader"></div>', '<div class="icon__sale">40%</div>']
+	- var iconsNew = ['<div class="icon__new"></div>']
+
+block content
+	.slider.slider--main
+		.slider__slide
+			img.slider__image(src="img/slide1.jpg")
+			.slider__info
+				p 
+					strong Новое поступление постельного белья
+				p от 5 000 рублей.
+		.slider__slide
+			img.slider__image(src="img/slide1.jpg")
+			.slider__info
+				p 
+					strong Новое поступление постельного белья
+				p от 5 000 рублей.
+		.slider__slide
+			img.slider__image(src="img/slide1.jpg")
+			.slider__info
+				p 
+					strong Новое поступление постельного белья
+				p от 5 000 рублей.
+	section.section
+		.section__title Лидеры продаж
+		+catalogItems(catalogItems, iconsLeader)
+	section.section
+		.section__title Акции и скидки
+		+catalogItems(catalogItems, iconsSale)
+	section.section
+		.section__title Новинки
+		+catalogItems(catalogItems, iconsNew)
+	section.section
+		.section__title Недавно вы смотрели
+		.slider.slider_viewed
+			.slider__slide
+				img.slider__image(src="img/slide1.jpg")
+				.slider__info
+					p Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
+			.slider__slide
+				img.slider__image(src="img/slide1.jpg")
+				.slider__info
+					p Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
+			.slider__slide
+				img.slider__image(src="img/slide1.jpg")
+				.slider__info
+					p Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
+	section.section.section_features
+		.site-description
+			img(src="img/site-title.jpg")
+			| - интернет-гипермаркет подарков и товаров для дома. Для Вашего дома. Для Вас!
+		.features
+			.features__feature
+				.features__icon.features__icon--good
+				.features__info
+					p.features__title Отличные цены
+					p.features__description Найдете дешевле - вернем разницу. 
+						a(href="#") Специальные скидки
+			.features__feature
+				.features__icon.features__icon--delivery
+				.features__info
+					p.features__title Быстрая доставка
+					p.features__description Доставляем по всей России!  
+						a(href="#") Экспресс-доставка
+						|  за 3 часа!
+			.features__feature
+				.features__icon.features__icon--pay
+				.features__info
+					p.features__title Удобная оплата
+					p.features__description Платите где угодно и как угодно! 
+						a(href="#") Наличные, безнал, банковские карты

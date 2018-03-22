@@ -1,0 +1,36 @@
+footer.footer
+	.footer__line.footer__line--top
+		.recommendations Узнавайте о выгодных предложениях и получайте личные рекомендации
+		form.subscribe
+			input.subscribe__input(type="email" placeholder="Введите свой E-mail")
+			button.subscribe__submit(type="submit") Подписаться
+	.footer_main
+		+menu('menu_vertical', ['Пользователям', 'Как сделать заказ', 'Оплата', 'Доставка', 'Система скидок', 'Возврат и обмен', 'Как стать оптовиком'])
+		+menu('menu_vertical', ['Поставщикам', 'Как начать сотрудничество', 'Оплата', 'Доставка', 'Возврат и обмен'])
+		.footer__column
+			p
+				strong Россия:<br>
+				a(href="#") 8-800-700-70-50
+			p
+				strong Москва:<br>
+				a(href="#") 8 (495) 943-60-10<br>
+				a(href="#") 8 (968) 665-70-50
+			p
+				strong Время приема заказов:<br>
+				| Пн-Пт: с 9:00 до 21:00<br>
+				| Сб-Вс: с 10:00 до 16:00
+		.footer__column
+			p
+				strong Skype:<br>
+				a(href="#") planetam-market
+			p
+				strong E-mail:<br>
+				a(href="#") info@m-market.ru<br>
+				a(href="#") m-market@inbox.ru
+		.social
+			a.social__item.social__item--vk(href="#")
+			a.social__item.social__item--fb(href="#")
+			a.social__item.social__item--ok(href="#")
+			a.social__item.social__item--in(href="#")
+	.footer__line.footer__line--bottom 
+		.copyright © 2005-2018 Интернет магазин М-МАРКЕТ

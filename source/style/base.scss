@@ -1,0 +1,46 @@
+html {
+	box-sizing: border-box;
+}
+
+*, 
+*::before, 
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: $regular;
+	font-size: 14px;
+
+	background: $main;
+
+	overflow-x: hidden;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+	outline: none;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include mobile {
+		width: 320px;
+	}
+
+	@include tablet {
+		width: 750px;
+	}
+
+	@include medium {
+		width: 960px;
+	}
+
+	@include desctop {
+		width: 1200px;
+	}
+}

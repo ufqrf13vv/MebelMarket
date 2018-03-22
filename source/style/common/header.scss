@@ -1,0 +1,133 @@
+.header {
+
+	&-main {
+		background: $white;
+		border-bottom: 1px solid $grey;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&--main {
+			padding: 20px 0;
+		}
+	}
+
+	&__link {
+		font-size: 16px;
+		text-decoration: none;
+
+		color: $black;
+
+		padding-top: 3px;
+
+		position: relative;
+
+		&::before {
+			content: '';
+
+			display: block;
+			width: 24px;
+			height: 24px;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&--favorite::before {
+			background: url('../img/icons.png') -4px -5px;
+		}
+
+		&--compare::before {
+			background: url('../img/icons.png') -80px -5px;
+		}
+
+		&--cart::before {
+			background: url('../img/icons.png') -37px -5px;
+		}
+
+		&:not(:last-child) {
+			padding-left: 30px;
+		}
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}
+
+.headline {
+	background: $blue;
+
+	color: $white;
+
+	padding: 15px 0;
+
+	&__link {
+		color: $white;
+
+		text-decoration: none;
+
+		border-bottom: 2px solid $light-blue;
+
+		position: relative;
+
+		&:not(:last-of-type) {
+			margin-right: 20px;
+		}
+
+		&:not(:last-of-type)::after {
+			content: '';
+
+			display: block;
+			width: 2px;
+		    height: 13px;
+
+		    position: absolute;
+		    top: 4px;
+		    right: -12px;
+
+		    background: $white;
+		}
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+	&__phone {
+		color: $white;
+
+		text-decoration: none;
+
+		margin-right: 23px;
+
+		position: relative;
+
+		&::after {
+			content: '';
+
+			display: block;
+			width: 2px;
+			height: 100%;
+
+			position: absolute;
+			right: -12px;
+			top: 0;
+
+			background: $white;
+			border-right: 1px solid #61c6e3;
+		}
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+	&__menu {
+		display: flex;
+	}
+}

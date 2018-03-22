@@ -1,0 +1,73 @@
+- 
+	var catalogItems = [
+		{ img: 'img/catalog-item1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000', oldprice: '135 000' },
+		{ img: 'img/catalog-item1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000', oldprice: '135 000' },
+		{ img: 'img/catalog-item1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000', oldprice: '135 000' },
+		{ img: 'img/catalog-item1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000', oldprice: '135 000' }
+	];
+-
+	var catalogMenu = [
+		{title: 'Мягкая мебель', items: ['Мягкие диваны и кушетки']},
+		{title: 'Мебель для кухни', items: ['Кухонные гарнитуры', 'Стулья для кухни', 'Столы для кухни', 'Кухонные гарнитуры', 'Стулья для кухни', 'Столы для кухни']},
+		{title: 'Мебель для спальни', items: ['Спальные гарнитуры', 'Шкафы для спальни', 'Кровати для спальни', 'Спальные гарнитуры', 'Шкафы для спальни', 'Кровати для спальни']}
+	]
+
+mixin menu(menuClass, links)
+	ul(class=`${menuClass}__list`)
+		each link in links
+			li(class=`${menuClass}__item`)
+				a(class=`${menuClass}__link`, href="#")= link
+
+mixin breadcrumbs(items)
+	- var n = 0;
+	.breadcrumb
+		while n < items.length - 1
+			.breadcrumb__item
+				a.breadcrumb__link(href="#") #{items[n++]}
+		span.breadcrumb__item--current #{items[n]}
+
+mixin catalogMenu(items) 
+	.catalog-menu
+		each item in items
+			.catalog-menu__item
+				a.catalog-menu__title(href="#") #{item.title}
+				.catalog-menu__list
+					each sub in item.items
+						a(href="#") #{sub}
+
+
+mixin catalogItems(items, icons, includePager)
+	.catalog-items
+		.catalog-items__items
+			each item in items
+				.catalog-items__item
+					if icons
+						.catalog-items__icons
+							each icon in icons
+								| !{icon}
+					.catalog-items__image
+						img(src=`${item.img}`)
+					.catalog-items__section #{item.section}
+					.catalog-items__name
+						a(href="#") #{item.name}
+					.catalog-items__prices
+						.catalog-items__price #{item.price}
+						if item.oldprice
+							.catalog-items__price--old #{item.oldprice}
+					.catalog-items__links
+						a.catalog-items__link--cart(href="#") В корзину
+						a.catalog-items__link--favorite(href="#")
+						a.catalog-items__link--compare(href="#")
+		if includePager
+			.catalog-items__pager
+				a.pager__item(href="#") 1
+				.pager__item.pager__ellipsis
+				a.pager__item(href="#") 5
+				span.pager__item(href="#") 6
+				a.pager__item(href="#") 7
+				a.pager__item(href="#") 8
+				a.pager__item(href="#") 9
+				.pager__item.pager__ellipsis
+				a.pager__item(href="#") 120
+		else
+			a.catalog-items__showmore(href="#") Показать еще

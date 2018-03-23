@@ -1,0 +1,75 @@
+.error {
+	padding: 60px 0;
+
+	&__logo {
+		display: flex;
+		justify-content: center;
+
+		margin-bottom: 60px;
+	}
+
+	&__header {
+		width: 100%;
+
+		font-family: $bold;
+		font-size: 40px;
+
+		padding: 20px 0;
+		margin-bottom: 60px;
+
+		background: $orange;
+		color: $white;
+
+		text-align: center;
+	}
+
+	&__subheader {
+		font-size: 26px;
+
+		text-align: center;
+
+		margin-bottom: 40px;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__menu {
+		position: relative;
+
+		&::after {
+			content: url('../img/arrow-back.png');
+
+			position: absolute;
+			top: -20px;
+			right: -130px;
+		}
+	}
+
+	&__list {
+		padding-left: 0;
+		margin: 0;
+
+		list-style: none;
+
+		text-align: center;
+	}
+
+	&__item:not(:last-child) {
+		margin-bottom: 12px;
+	}
+
+	&__link {
+		font-size: 16px;
+
+		color: $blue;
+
+		text-decoration: none;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}

@@ -8,6 +8,13 @@
 
 	&__wrapper {
 		position: relative;
+
+		&--small {
+			display: flex;
+			justify-content: space-between;
+
+			margin-bottom: 60px;
+		}
 	}
 
 	&__arrow {
@@ -44,6 +51,17 @@
 		border-radius: 3px;
 
 		position: relative;
+
+		&--small {
+			display: flex;
+
+			width: 370px;
+
+			padding: 0;
+
+			box-shadow: none;
+			border: 1px solid $grey;
+		}
 
 		&-info {
 			width: 350px;
@@ -95,6 +113,25 @@
 			&:not(:last-child) {
 				margin-right: 20px;
 			}
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 24px;
+
+		color: $blue;
+
+		padding: 18px;
+	}
+
+	&__image {
+		width: 100px;
+
+		border-right: 1px solid $grey;
+
+		& > img {
+			height: 100%;
 		}
 	}
 }

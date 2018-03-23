@@ -1,0 +1,79 @@
+.delivery {
+
+	&__list {
+		align-self: flex-start;
+
+		width: 270px;
+
+		list-style: none;
+
+		padding-left: 0;
+		margin: 0;
+		margin-right: 35px;
+
+		text-transform: uppercase;
+
+		border: 1px solid $grey;
+	}
+
+	&__item {
+		background: $white;
+		
+		&:not(:last-child) {
+			border-bottom: 1px solid $grey;
+		}
+
+		&--active > a {
+			background: $orange;
+
+			color: $white;
+		}
+	}
+
+	&__link {
+		display: block;
+
+		text-decoration: none;
+
+		color: $black;
+
+		padding: 9px;
+
+		&:hover {
+			background: $orange;
+
+			color: $white;
+		}
+	}
+
+	&__main {
+		flex: 1;
+
+		& ul {
+			padding-left: 15px;
+		}
+	}
+
+	& table {
+		width: 100%;
+
+		border-collapse: collapse;
+
+		font-size: 12px;
+
+		text-align: center;
+
+		& td,
+		& th {
+			font-weight: normal;
+
+			padding: 15px;
+		}
+
+		& tr {
+			background: $white;
+
+			border-bottom: 2px solid $main;
+		}
+	}
+}

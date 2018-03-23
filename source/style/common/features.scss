@@ -1,0 +1,66 @@
+.features {
+	background: $white;
+
+	padding-top: 50px;
+	padding-bottom: 60px;
+
+	margin-bottom: -60px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+
+		width: 350px;
+	}
+
+	&__icon {
+		width: 101px;
+		height: 101px;
+
+		border-radius: 50%;
+
+		margin-right: 20px;
+
+		&--good {
+			background: url('../img/features.png') no-repeat 10px 15px, $blue;
+		}
+
+		&--delivery {
+			background: url('../img/features.png') no-repeat -103px 18px, $blue;
+		}
+
+		&--pay {
+			background: url('../img/features.png') no-repeat -236px 18px, $blue;
+		}
+	}
+
+	&__title {
+		font-size: 20px;
+
+		margin-bottom: 13px;
+	}
+
+	&__description {
+		font-size: 16px;
+
+		line-height: 24px;
+	}
+
+	&__info {
+		flex: 1;
+	}
+
+	&__link {
+		text-decoration: none;
+
+		color: $blue;
+
+		border-bottom: 2px solid $blue;
+	}
+}

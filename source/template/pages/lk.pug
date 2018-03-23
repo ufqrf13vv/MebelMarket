@@ -1,0 +1,60 @@
+extends ../_template
+
+block variables
+	- var title = 'Личный кабинет'
+
+block content
+	.container
+		+breadcrumbs(['Главная', 'Личный кабинет'])
+
+		h2.main-title.main-title--underline Личный кабинет
+		.wrapper
+			+menu('delivery', ['Мои заказы', 'Настройки аккаунта'])
+			.lk
+				.lk__links
+					a.lk__link(href="#") Все заказы
+					a.lk__link.lk__link--active(href="#") Архив заказов
+				.lk__order
+					.lk__order-section
+						.lk__order-block
+							.lk__order-title № Заказа
+							.lk__order-text 125236522144
+						.lk__order-block
+							.lk__order-title Дата заказа
+							.lk__order-text 01.08.2017
+					.lk__order-section
+						.lk__order-title Заказ:
+						.lk__order-text ФИГУРКА С ПОДСВЕТКОЙ "СВЕЧА" 5*5*16 СМ. (1 шт.)<br>
+						| КРУЖКА "ПЕТУХ" 350 МЛ. (2 шт.)<br>
+						| ФИГУРКА С ПОДСВЕТКОЙ "СВЕЧА" 5*5*16 СМ. (1 шт.)<br>
+						| КРУЖКА "ПЕТУХ" 350 МЛ. (2 шт.)
+					.lk__order-section
+						.lk__order-block
+							.lk__order-title Сумма заказа:
+							.lk__order-text 15 000 руб.
+					.lk__order-section
+						.lk__order-block
+							.lk__order-title Статус:
+							.lk__order-text.lk__order-text--green Доставлен
+				.lk__order
+					.lk__order-section
+						.lk__order-block
+							.lk__order-title № Заказа
+							.lk__order-text 125236522144
+						.lk__order-block
+							.lk__order-title Дата заказа
+							.lk__order-text 01.08.2017
+					.lk__order-section
+						.lk__order-title Заказ:
+						.lk__order-text ФИГУРКА С ПОДСВЕТКОЙ "СВЕЧА" 5*5*16 СМ. (1 шт.)<br>
+						| КРУЖКА "ПЕТУХ" 350 МЛ. (2 шт.)<br>
+						| ФИГУРКА С ПОДСВЕТКОЙ "СВЕЧА" 5*5*16 СМ. (1 шт.)<br>
+						| КРУЖКА "ПЕТУХ" 350 МЛ. (2 шт.)
+					.lk__order-section
+						.lk__order-block
+							.lk__order-title Сумма заказа:
+							.lk__order-text 15 000 руб.
+					.lk__order-section
+						.lk__order-block
+							.lk__order-title Статус:
+							.lk__order-text.lk__order-text--orange Доставлен

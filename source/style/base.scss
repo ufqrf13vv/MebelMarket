@@ -24,6 +24,10 @@ button:focus {
 	outline: none;
 }
 
+img {
+	display: block;
+}
+
 .container {
 	margin: 0 auto;
 	padding: 0 15px;
@@ -43,4 +47,14 @@ button:focus {
 	@include desctop {
 		width: 1200px;
 	}
+}
+
+.wrapper {
+	display: flex;
+}
+
+.main {
+	line-height: 21px;
+
+	margin-bottom: 60px;
 }

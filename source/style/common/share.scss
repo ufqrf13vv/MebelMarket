@@ -1,0 +1,35 @@
+.share {
+	display: flex;
+
+	font-size: 12px;
+
+	color: #b4b4b4;
+
+	margin-bottom: 60px;
+
+	&__icon {
+		width: 26px;
+		height: 20px;
+
+		&--fb {
+			background: url('../img/soc-icons.png') no-repeat -37px 0;
+
+		}
+
+		&--in {
+			background: url('../img/soc-icons.png') no-repeat -124px 0;
+		}
+
+		&--ok {
+			background: url('../img/soc-icons.png') no-repeat -75px 0;
+		}
+
+		&--tw {
+			background: url('../img/soc-icons.png') no-repeat -166px 0;
+		}
+
+		&--vk {
+			background: url('../img/soc-icons.png') no-repeat 0 0;
+		}
+	}
+}

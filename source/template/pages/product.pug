@@ -4,62 +4,66 @@ block variables
 	- var title = 'Кресло 64*60*73 см.'
 
 block content
-	+breadcrumbs(['Главная', 'Мебель', 'Мебель для кухни', 'Кресло 64*60*73 см.'])
-	.product
-		.product__main
-			.product__gallery
-				.icon__sale 40%
-				.product__image
-					img(src="img/product.jpg")
-				.products__thumbs
-					.product__thumb.product__thumb--active
-						img(src="img/product-thumb.jpg")
-					.product__thumb
-						img(src="img/product-thumb.jpg")
-			.product__info
-				h1 Кресло 64*60*73 см.
-				.properties
-					.property
-						.property__title Артикул 
-						.property__value 762-011 
-					.property
-						.property__title Страна 
-						.property__value Китай
-					.property
-						.property__title Производитель 
-						.property__value anji kasei furniture co. ltd 
-					.property
-						.property__title Материал 
-						.property__value МДФ/Ткань 
-					.property
-						.property__title Наличие 
-						.property__value #[span.warning Нет в наличии] #[a.inform__link(href="#") Узнать о поступлении]
-				.product__buy
+	.container
+		+breadcrumbs(['Главная', 'Мебель', 'Мебель для кухни', 'Карточка товара'])
+
+		.product
+			.product__main
+				.product__gallery
+					.product__image
+						.catalog__item-icon.catalog__item-icon--discount.product__icon 40%
+						img(src="/assets/img/product-2.png")
+					.product__thumbs
+						.product__thumbs-item.product__thumbs-item--active
+							img(src="/assets/img/product-2.png")
+						.product__thumbs-item
+							img(src="/assets/img/product-2.png")
+				.product__info
+					.product__title Кресло 64*60*73 см.
+					table.product__props
+						tr
+							td.product__props-title Артикул 
+							td 762-011 
+						tr
+							td.product__props-title Страна 
+							td Китай
+						tr
+							td.product__props-title Производитель 
+							td anji kasei furniture co. ltd 
+						tr
+							td.product__props-title Материал 
+							td МДФ/Ткань 
+						tr
+							td.product__props-title Наличие 
+							td #[span.warning Нет в наличии] #[a.product__link(href="#") Узнать о поступлении]
 					.product__priceinfo
-						.product__quantity
-							a.minus(href="#") -
-							input.text.product__count(type="text")
-							a.plus(href="#") +
-						.product__buttons
-							a.button.button__add2cart(href="#") Добавить в корзину
-							a.button.button__buy1click(href="#") Купить в 1 клик
-							a.button.button__credit(href="#") Купить в кредит
-		.share Поделиться: 
-			a.share__fb(href="#")
-			a.share__in(href="#")
-			a.share__ok(href="#")
-			a.share__tw(href="#")
-			a.share__vk(href="#")
-		.product__tabs
-			a.product__detail(href="#product__detail") Подробнее
-			a.product__properties(href="#product__properties") Особенности
-			a.product__kit(href="#product__kit") Комплектация
-			div#product__detail
-				| Представляем Вам красивую классическую спальню от известной фабрики “Диа мебель” из Калининграда. Классический интерьер спальни – это сочетание стиля, изысканности, гармонии и роскоши. Выбирая классический дизайн, вы подчеркиваете безупречный вкус и эстетичность, а также создаете уютную и комфортную атмосферу в спальне. Роскошная мебель с богатой отделкой и обилие эффектных декоративных элементов - основные отличия классического стиля. Каждый предмет спального гарнитура или элемент дизайна гармонично вписывается в общую композицию пространства. Спальня Бьянка - это спальня в стиле модерн. Продается только в комплекте. Возможны композиции с 4х и 5-ти дверными шкафами. Изголовье кровати выполнено из эко-кожи.
-			div#product__properties
-				| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum dolor molestiae doloribus. Ipsum, vitae, obcaecati! Cupiditate excepturi perferendis voluptatum hic ducimus a quaerat vero corporis, quia eos ipsa consequuntur iusto ipsum beatae porro eveniet ipsam est quae, nostrum voluptas! Natus aspernatur quae cumque, a, unde error. Sequi, eos perspiciatis optio!
-			div#product__kit
-				| Ex quibusdam esse, nisi perspiciatis sapiente. Lorem ipsum dolor sit amet, consectetur adipisicing elit. In impedit esse omnis laboriosam corporis, aliquam ipsa exercitationem voluptatibus quidem at tenetur debitis dignissimos! Adipisci similique facilis laboriosam a! Aspernatur repudiandae cumque explicabo impedit, magnam laborum inventore consequuntur saepe, earum fuga hic soluta, delectus architecto. 
-		section.section
-			.section__title Персональные рекомендации
+						.product__block.product__block--quantity
+							.product__count
+								button.button.button--minus(href="#") -
+								input.input.input--count(type="text", value="1")
+								button.button.button--plus(href="#") +
+							.product__oldprice 1 700 руб.
+							.product__price 1 500 руб.
+						.product__block.product__block--buttons
+							a.button.button--add2cart(href="#") Добавить в корзину
+							a.button.button--buy1click(href="#") Купить в 1 клик
+							a.button.button--credit(href="#") В кредит
+			.share Поделиться: 
+				a.share__icon.share__icon--fb(href="#")
+				a.share__icon.share__icon--in(href="#")
+				a.share__icon.share__icon--ok(href="#")
+				a.share__icon.share__icon--tw(href="#")
+				a.share__icon.share__icon--vk(href="#")
+			.product__tabs
+				span#tab2
+				span#tab3
+				a.product__tabs-item.product__tabs-item--active(href="#tab1") Подробнее
+				a.product__tabs-item(href="#tab2") Особенности
+				a.product__tabs-item(href="#tab3") Комплектация
+				.product__tabs-text Представляем Вам красивую классическую спальню от известной фабрики “Диа мебель” из Калининграда. Классический интерьер спальни – это сочетание стиля, изысканности, гармонии и роскоши. Выбирая классический дизайн, вы подчеркиваете безупречный вкус и эстетичность, а также создаете уютную и комфортную атмосферу в спальне. Роскошная мебель с богатой отделкой и обилие эффектных декоративных элементов - основные отличия классического стиля. Каждый предмет спального гарнитура или элемент дизайна гармонично вписывается в общую композицию пространства. Спальня Бьянка - это спальня в стиле модерн. Продается только в комплекте. Возможны композиции с 4х и 5-ти дверными шкафами. Изголовье кровати выполнено из эко-кожи.
+				.product__tabs-text Tab2
+				.product__tabs-text Tab3
+
+			section.section
+				h2.main-title.main-title--underline Персональные рекомендации
 				+catalogItems(catalogItems)

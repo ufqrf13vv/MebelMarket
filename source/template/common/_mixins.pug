@@ -48,7 +48,7 @@ mixin catalogItems(items, icons, includePager)
 					img(src=`${item.img}`)
 				.catalog__item-description
 					.catalog__item-category #{item.section}
-					a.catalog__item-name(href="#") #{item.name}
+					.catalog__item-name #{item.name}
 					.catalog__item-prices
 						.catalog__item-price #{item.price}
 						if item.oldprice

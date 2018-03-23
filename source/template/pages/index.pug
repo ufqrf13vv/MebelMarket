@@ -13,7 +13,7 @@ block content
 				.slider__arrow.slider__arrow--left
 				.slider__arrow.slider__arrow--right
 				.slider__slide
-					img.slider__image(src="/assets/img/slide.png")
+					img(src="/assets/img/slide.png")
 					.slider__slide-info
 						.slider__slide-text Новое поступление постельного белья
 						.slider__slide-price от 5000 рублей
@@ -41,44 +41,52 @@ block content
 				h2.main-title Новинки
 		.container
 			+catalogItems(catalogItems, iconsNew)
+
 	section.section
 		.section__title 
 			.container
 				h2.main-title Недавно вы смотрели
-		.slider.slider_viewed
-			.slider__slide
-				img.slider__image(src="img/slide1.jpg")
-				.slider__info
-					p Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
-			.slider__slide
-				img.slider__image(src="img/slide1.jpg")
-				.slider__info
-					p Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
-			.slider__slide
-				img.slider__image(src="img/slide1.jpg")
-				.slider__info
-					p Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
-	section.section.section_features
-		.site-description
-			img(src="img/site-title.jpg")
-			| - интернет-гипермаркет подарков и товаров для дома. Для Вашего дома. Для Вас!
-		.features
-			.features__feature
-				.features__icon.features__icon--good
-				.features__info
-					p.features__title Отличные цены
-					p.features__description Найдете дешевле - вернем разницу. 
-						a(href="#") Специальные скидки
-			.features__feature
-				.features__icon.features__icon--delivery
-				.features__info
-					p.features__title Быстрая доставка
-					p.features__description Доставляем по всей России!  
-						a(href="#") Экспресс-доставка
-						|  за 3 часа!
-			.features__feature
-				.features__icon.features__icon--pay
-				.features__info
-					p.features__title Удобная оплата
-					p.features__description Платите где угодно и как угодно! 
-						a(href="#") Наличные, безнал, банковские карты
+		.slider
+			.container
+				.slider__wrapper.slider__wrapper--small
+					.slider__arrow.slider__arrow--left
+					.slider__arrow.slider__arrow--right
+					.slider__slide.slider__slide--small
+						.slider__image
+							img(src="/assets/img/slide-1.png")
+						.slider__text Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
+					.slider__slide.slider__slide--small
+						.slider__image
+							img(src="/assets/img/slide-1.png")
+						.slider__text Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
+					.slider__slide.slider__slide--small
+						.slider__image
+							img(src="/assets/img/slide-1.png")
+						.slider__text Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
+
+	section.features
+		.container
+			.description
+				.description__image
+					img(src="/assets/img/logo-feature.png")
+				.description__text - интернет-гипермаркет подарков и товаров для дома. Для Вашего дома. Для Вас!
+			.features__wrapper
+				.features__item
+					.features__icon.features__icon--good
+					.features__info
+						.features__title Отличные цены
+						.features__description Найдете дешевле - вернем разницу. 
+							a.features__link(href="#") Специальные скидки
+				.features__item
+					.features__icon.features__icon--delivery
+					.features__info
+						.features__title Быстрая доставка
+						.features__description Доставляем по всей России!  
+							a.features__link(href="#") Экспресс-доставка
+							|  за 3 часа!
+				.features__item
+					.features__icon.features__icon--pay
+					.features__info
+						.features__title Удобная оплата
+						.features__description Платите где угодно и как угодно! 
+							a.features__link(href="#") Наличные, безнал, банковские карты

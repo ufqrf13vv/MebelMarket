@@ -3,4 +3,33 @@
 	font-size: 30px;
 
 	color: $blue;
+
+	&--underline {
+		padding-bottom: 15px;
+		
+		border-bottom: 1px solid $blue;
+	}
+}
+
+h2 {
+	font-family: $bold;
+	font-size: 26px;
+
+	line-height: 30px;
+
+	margin: 15px 0;
+}
+
+h3 {
+	font-family: $bold;
+	font-size: 20px;
+
+	margin: 10px 0;
+}
+
+h4 {
+	font-family: $bold;
+	font-size: 14px;
+
+	margin: 10px 0;
 }

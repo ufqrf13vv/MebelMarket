@@ -1,0 +1,62 @@
+.lk {
+	flex-grow: 1;
+	
+	&__links {
+		display: flex;
+
+		font-size: 12px;
+
+		margin-bottom: 20px;
+	}
+
+	&__link {
+		text-decoration: none;
+
+		color: #b4b4b4;
+
+		&--active {
+			color: $blue;
+		}
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	&__order {
+		display: flex;
+		justify-content: space-between;
+
+		padding: 26px 30px;
+
+		background: $white;
+
+		border: 1px solid $grey;
+		border-radius: 4px;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+
+		&-section {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&-title {
+			color: #b4b4b4;
+		}
+
+		&-text {
+
+			&--green {
+				color: $green;
+			}
+
+			&--orange {
+				color: $orange;
+			}
+		}
+	}
+}

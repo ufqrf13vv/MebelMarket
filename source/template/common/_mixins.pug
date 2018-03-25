@@ -3,6 +3,8 @@
 		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
 		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
 		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
+		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
+		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' },
 		{ img: '/assets/img/product-1.jpg', section: 'Классичесие спальни', name: 'Спальный гарнитур Аллегро белый с 6-ти дверным шкафом', price: '116 000 руб.', oldprice: '135 000 руб.' }
 	];
 -
@@ -36,7 +38,7 @@ mixin catalogMenu(items)
 						a(href="#") #{sub}
 
 
-mixin catalogItems(items, icons, includePager)
+mixin catalogItems(items, icons)
 	.catalog
 		each item in items
 			.catalog__item
@@ -54,22 +56,12 @@ mixin catalogItems(items, icons, includePager)
 						if item.oldprice
 							.catalog__item-oldprice #{item.oldprice}
 					.catalog__item-links
-						a.catalog__item-cart(href="#") В корзину
-						a.catalog__item-favorite(href="#")
-						a.catalog__item-compare(href="#")
-		if includePager
-			.catalog-items__pager
-				a.pager__item(href="#") 1
-				.pager__item.pager__ellipsis
-				a.pager__item(href="#") 5
-				span.pager__item(href="#") 6
-				a.pager__item(href="#") 7
-				a.pager__item(href="#") 8
-				a.pager__item(href="#") 9
-				.pager__item.pager__ellipsis
-				a.pager__item(href="#") 120
-		else
-			a.catalog__showmore(href="#") Показать еще
+						a.catalog__item-link.catalog__item-link--cart(href="#") В корзину
+							include ../../images/svg/shopping-cart.svg
+						a.catalog__item-link.catalog__item-link--small(href="#")
+							include ../../images/svg/star.svg
+						a.catalog__item-link.catalog__item-link--small(href="#")
+							include ../../images/svg/th-list.svg
 
 mixin characteristics(items) 
 	.compare__characteristics

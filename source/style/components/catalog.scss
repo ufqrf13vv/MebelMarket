@@ -3,6 +3,8 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 
+	margin-bottom: 30px;
+
 	&__item {
 		width: 270px;
 
@@ -10,6 +12,8 @@
 		border-radius: 3px;
 
 		background: $white;
+
+		margin-bottom: 30px;
 
 		&--compare {
 			position: relative;
@@ -113,47 +117,112 @@
 			padding-top: 19px;
 		}
 
-		&-cart {
+		&-link {
+			display: flex;
+			align-items: center;
+
+			height: 24px;
+
 			font-size: 16px;
 
 			text-decoration: none;
 
 			color: $blue;
 
-			padding-left: 32px;
+			&--cart {
+				margin-right: auto;
+			}
 
-			position: relative;
+			&--cart > svg {
+				width: 24px;
+				height: 24px;
 
-			&::before {
-				content: '';
+				margin-right: 10px;
 
-				display: block;
-				width: 25px;
-				height: 25px;
+				fill: $blue;
 
-				background: url('../img/icons.png') no-repeat -112px 0;
+				order: -1;
+			}
 
-				position: absolute;
-				top: -6px;
-				left: 0;
+			&--small:last-child {
+				margin-left: 20px;
+			}
+
+			&--small > svg {
+				width: 21px;
+				height: 21px;
+
+				fill: #c8c8c8;
+			}
+
+			&:hover,
+			&:hover > svg {
+				fill: $orange;
+				color: $orange;
+			}
+		}
+	}
+
+	&__novelties {
+		margin-bottom: 50px;
+	}
+
+	&__novelty {
+		width: 66%;
+		height: 320px;
+
+		position: relative;
+
+		&--small {
+			width: 30%;
+		}
+
+		&-row {
+			display: flex;
+			justify-content: space-between;
+
+			&:not(:last-child) {
+				margin-bottom: 30px;
 			}
 		}
 
-		&-favorite {
-			width: 25px;
-			height: 25px;
+		&-desc {
+			width: 365px;
 
-			background: url('../img/icons.png') no-repeat -3px -4px;
-			
-			margin-left: auto;
-			margin-right: 20px;
+			font-family: $bold;
+			font-size: 20px;
+			line-height: 30px;
+
+			padding: 15px;
+
+			color: $white;
+			background: rgba(247, 158, 55, 0.9);;
+
+			position: absolute;
+			left: 15px;
+			bottom: 15px;
+
+			&--small {
+				width: auto;
+
+				font-size: 16px;
+				line-height: 24px;
+
+				padding: 8px 15px;
+
+				left: 0;
+			}
 		}
+	}
 
-		&-compare {
-			width: 25px;
-			height: 25px;
+	&__footer {
+		display: flex;
+		justify-content: center;
 
-			background: url('../img/icons.png') no-repeat -76px -4px;
+		width: 100%;
+
+		&:not(:last-of-type) {
+			margin-bottom: 55px;
 		}
 	}
 
@@ -168,11 +237,21 @@
 
 		color: $white;
 
-		padding: 16px 220px;
-		margin: auto;
-		margin-top: 60px;
+		padding: 13px 220px;
 
 		background: $orange;
 		border-radius: 4px;
+
+		&--black {
+			color: $black;
+
+			background: transparent;
+
+			border: 1px solid $text-grey;
+		}
+
+		&:hover {
+			opacity: .7;
+		}
 	}
 }

@@ -77,6 +77,8 @@
 	}
 
 	&__wrapper {
+		width: 46%;
+		
 		position: relative;
 	}
 
@@ -248,5 +250,31 @@
 		position: absolute;
 		top: 2px;
 		left: 6px;
+	}
+}
+
+.radio-color {
+	display: none;
+
+	&__label {
+		width: 30px;
+		height: 30px;
+
+		border-radius: 50%;
+
+		overflow: hidden;
+
+		& > img {
+			width: 100%;
+			height: 100%;
+		}
+
+		&:not(:last-child) {
+			margin-right: 12px;
+		}
+	}
+
+	&:checked + &__label {
+		border: 2px solid $orange;
 	}
 }

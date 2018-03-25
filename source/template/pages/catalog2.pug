@@ -24,14 +24,14 @@ block content
 					include ../../images/svg/th.svg
 				a.filter__sort-type.filter__sort-type--active(href="#")
 					include ../../images/svg/bars.svg
-		.wrapper
+		.wrapper.wrapper--justify
 			aside.filter__aside
 				.filter__block
 					input.check(type="checkbox", id="instock")
 					label.check__label(for="instock") Товар в наличии
 				.filter__block
 					.filter__title Цена руб
-					.filter__row
+					.filter__row.filter__row--justify
 						.input__wrapper
 							span.input__sign от
 							input.input.input--small(type="text", placeholder="1 500")
@@ -55,3 +55,35 @@ block content
 					label.check__label.check__label--column(for="oval") Овальный
 					input.check(type="checkbox", id="rectangle")
 					label.check__label.check__label--column(for="rectangle") Прямоугольный
+				.filter__block
+					.filter__title Цвет
+					.filter__row
+						input.radio-color(type="radio", id="green", name="color", checked="checked")
+						label.radio-color__label(for="green")
+							img(src="/assets/img/color.png", alt="")
+						input.radio-color(type="radio", id="red", name="color")
+						label.radio-color__label(for="red")
+							img(src="/assets/img/color.png", alt="")
+						input.radio-color(type="radio", id="black", name="color")
+						label.radio-color__label(for="black")
+							img(src="/assets/img/color.png", alt="")
+						input.radio-color(type="radio", id="white", name="color")
+						label.radio-color__label(for="white")
+							img(src="/assets/img/color.png", alt="")
+				.filter__footer
+					button.button.button--add2cart Применить
+				.filter__footer
+					button.button.button--buy1click Сбросить
+			.filter__catalog
+				+catalogItems(catalogItems, iconsLeader)
+				.pagination
+					a.pagination__item(href="#") 1
+					.pagination__dots
+						include ../../images/svg/ellipsis-h.svg
+					a.pagination__item(href="#") 5
+					a.pagination__item.pagination__item--active(href="#") 6
+					a.pagination__item(href="#") 7
+					a.pagination__item(href="#") 8
+					.pagination__dots 
+						include ../../images/svg/ellipsis-h.svg
+					a.pagination__item(href="#") 120

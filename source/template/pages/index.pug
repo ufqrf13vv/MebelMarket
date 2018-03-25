@@ -29,18 +29,24 @@ block content
 				h2.main-title Лидеры продаж
 		.container
 			+catalogItems(catalogItems, iconsLeader)
+			.catalog__footer
+				a.catalog__showmore(href="#") Показать еще
 	section.section
 		.section__title 
 			.container
 				h2.main-title Акции и скидки
 		.container
 			+catalogItems(catalogItems, iconsSale)
+			.catalog__footer
+				a.catalog__showmore(href="#") Показать еще
 	section.section
 		.section__title 
 			.container
 				h2.main-title Новинки
 		.container
 			+catalogItems(catalogItems, iconsNew)
+			.catalog__footer
+				a.catalog__showmore(href="#") Показать еще
 
 	section.section
 		.section__title 

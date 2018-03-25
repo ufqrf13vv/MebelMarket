@@ -1,0 +1,48 @@
+extends ../_template
+
+block variables
+	- var title = 'Каталог 1'
+	- var iconsLeader = ['<div class="catalog__item-icon catalog__item-icon--leader"></div>']
+	- var iconsSale = ['<div class="catalog__item-icon catalog__item-icon--leader"></div>', '<div class="catalog__item-icon catalog__item-icon--discount">-40%</div>']
+
+block content
+	.container
+		+breadcrumbs(['Главная', 'Мебель'])
+
+		h1.main-title.main-title--underline Мебель
+
+		.wrapper.wrapper--justify
+			aside.filter__aside
+				.filter__block
+					.filter__title Мягкая мебель
+					ul.filter__list
+						li.filter__item.filter__item--active
+							a.filter__link(href="#") Мягкие диваны и кушетки
+				.filter__block
+					.filter__title Мебель для кухни
+					+menu('filter', ['Пункт 1', 'Пункт 2', 'Пункт 3'])
+					a.filter__more(href="#") Еще
+				.filter__block
+					.filter__title Мебель для спальни
+					+menu('filter', ['Пункт 1', 'Пункт 2', 'Пункт 3'])
+					a.filter__more(href="#") Еще
+			.filter__catalog
+				.catalog__novelties
+					.catalog__novelty-row
+						.catalog__novelty(style="background: url('../assets/img/nov-1.jpg') no-repeat 0 0; background-size: cover;")
+							.catalog__novelty-desc Новое поступление гарнитуров от 25 000 руб.
+						.catalog__novelty.catalog__novelty--small(style="background: url('../assets/img/nov-2.jpg') no-repeat 0 0; background-size: cover;")
+							.catalog__novelty-desc.catalog__novelty-desc--small Новое поступление гарнитуров от 25 000 руб.
+					.catalog__novelty-row
+						.catalog__novelty.catalog__novelty--small(style="background: url('../assets/img/nov-3.jpg') no-repeat 0 0; background-size: cover;")
+							.catalog__novelty-desc.catalog__novelty-desc--small Новое поступление гарнитуров от 25 000 руб.
+						.catalog__novelty(style="background: url('../assets/img/nov-4.jpg') no-repeat 0 0; background-size: cover;")
+							.catalog__novelty-desc Новое поступление гарнитуров от 25 000 руб.
+				h2.main-title.main-title--black Лидеры продаж
+				+catalogItems(catalogItems, iconsLeader)
+				.catalog__footer
+					a.catalog__showmore.catalog__showmore--black(href="#") Показать еще
+				h2.main-title.main-title--black Акции и скидки
+				+catalogItems(catalogItems, iconsSale)
+				.catalog__footer
+					a.catalog__showmore.catalog__showmore--black(href="#") Показать еще

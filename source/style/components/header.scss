@@ -16,45 +16,31 @@
 	}
 
 	&__link {
+		display: flex;
+		align-items: center;
+
 		font-size: 16px;
 		text-decoration: none;
 
 		color: $black;
 
-		padding-top: 3px;
+		& > svg {
+			width: 25px;
+			height: 20px;
 
-		position: relative;
+			fill: #c8c8c8;
 
-		&::before {
-			content: '';
+			margin-right: 10px;
 
-			display: block;
-			width: 24px;
-			height: 24px;
-
-			position: absolute;
-			top: 0;
-			left: 0;
+			order: -1;
 		}
 
-		&--favorite::before {
-			background: url('../img/icons.png') -4px -5px;
-		}
-
-		&--compare::before {
-			background: url('../img/icons.png') -80px -5px;
-		}
-
-		&--cart::before {
-			background: url('../img/icons.png') -37px -5px;
-		}
-
-		&:not(:last-child) {
-			padding-left: 30px;
-		}
-
-		&:hover {
-			opacity: .7;
+		&:hover,
+		&--active,
+		&:hover > svg,
+		&--active > svg {
+			color: $orange;
+			fill: $orange;
 		}
 	}
 }

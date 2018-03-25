@@ -19,9 +19,12 @@ header.header
 				form.search
 					input.search__input(type="text" placeholder="Найти среди более 5 000 товаров...")
 					input.search__submit(type="submit")
-				a.header__link.header__link--favorite(href="#") Избранное
-				a.header__link.header__link--compare(href="#") Сравнение
-				a.header__link.header__link--cart(href="#") Корзина
+				a.header__link(href="#") Избранное
+					include ../../images/svg/star.svg
+				a.header__link(href="#") Сравнение
+					include ../../images/svg/th-list.svg
+				a.header__link.header__link--active(href="#") Корзина
+					include ../../images/svg/shopping-cart.svg
 				a.header__link(href="news.html")
 					img(src="/assets/img/user.png")
 	.main-menu

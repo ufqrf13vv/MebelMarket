@@ -1,0 +1,57 @@
+extends ../_template
+
+block variables
+	- var title = 'Каталог 2'
+
+block content
+	.container
+		+breadcrumbs(['Главная', 'Мебель', 'Мебель для кухни', 'Столы для кухни'])
+
+		h1.main-title Столы для кухни
+		.filter__selected
+			.filter__selected-item esta
+			.filter__selected-item HABUFA
+			.filter__selected-item Круглый
+			.filter__selected-item Овальный
+			.filter__selected-item Дерево
+		.filter__sort
+			.filter__sort-block Сортировать:
+				a.filter__sort-link(href="#") по популярности
+				a.filter__sort-link(href="#") по цене
+				a.filter__sort-link(href="#") по скидке
+			.filter__sort-block
+				a.filter__sort-type(href="#")
+					include ../../images/svg/th.svg
+				a.filter__sort-type.filter__sort-type--active(href="#")
+					include ../../images/svg/bars.svg
+		.wrapper
+			aside.filter__aside
+				.filter__block
+					input.check(type="checkbox", id="instock")
+					label.check__label(for="instock") Товар в наличии
+				.filter__block
+					.filter__title Цена руб
+					.filter__row
+						.input__wrapper
+							span.input__sign от
+							input.input.input--small(type="text", placeholder="1 500")
+						.input__wrapper
+							span.input__sign до
+							input.input.input--small(type="text", placeholder="15 000")
+				.filter__block
+					.filter__title Механизм складывания
+					.filter__row
+						input.check(type="checkbox", id="yes")
+						label.check__label.check__label--row(for="yes") Да
+						input.check(type="checkbox", id="no")
+						label.check__label.check__label--row(for="no") Нет
+						input.check(type="checkbox", id="nothing")
+						label.check__label.check__label--row(for="nothing") Не важно
+				.filter__block
+					.filter__title Форма
+					input.check(type="checkbox", id="circle")
+					label.check__label.check__label--column(for="circle") Круглый
+					input.check(type="checkbox", id="oval")
+					label.check__label.check__label--column(for="oval") Овальный
+					input.check(type="checkbox", id="rectangle")
+					label.check__label.check__label--column(for="rectangle") Прямоугольный

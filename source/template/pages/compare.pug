@@ -1,0 +1,45 @@
+extends ../_template
+
+block variables
+	- var title = 'Сравнение товаров'
+
+block content
+	.container
+		+breadcrumbs(['Главная', 'Сравнение товаров'])
+
+		h1.main-title.main-title--underline Сравнение товаров
+		.lk__links
+			a.lk__link(href="#") Все характерисики
+			a.lk__link.lk__link--active(href="#") Различающиеся
+		.compare
+			.compare__wrapper
+				.catalog__item.catalog__item--compare
+					a.cart__item-remove(href="#")
+					.catalog__item-image
+						img(src="/assets/img/product-1.jpg")
+					.catalog__item-description
+						.catalog__item-category Категория
+						.catalog__item-name Наименование товара
+						.catalog__item-prices
+							.catalog__item-price 116 000 руб.
+							.catalog__item-oldprice 135 000 руб.
+						.catalog__item-links
+							a.catalog__item-cart(href="#") В корзину
+							a.catalog__item-favorite(href="#")
+							a.catalog__item-compare(href="#")
+				.catalog__item.catalog__item--compare
+					a.cart__item-remove(href="#")
+					.catalog__item-image
+						img(src="/assets/img/product-1.jpg")
+					.catalog__item-description
+						.catalog__item-category Категория
+						.catalog__item-name Наименование товара
+						.catalog__item-prices
+							.catalog__item-price 116 000 руб.
+							.catalog__item-oldprice 135 000 руб.
+						.catalog__item-links
+							a.catalog__item-cart(href="#") В корзину
+							a.catalog__item-favorite(href="#")
+							a.catalog__item-compare(href="#")
+			+characteristics(['№1 Тип характеристики', '№2 Тип характеристики', '№3 Тип характеристики', '№4 Тип характеристики', '№5 Тип характеристики', '№6 Тип характеристики', '№7 Тип характеристики'])
+

@@ -70,3 +70,11 @@ mixin catalogItems(items, icons, includePager)
 				a.pager__item(href="#") 120
 		else
 			a.catalog__showmore(href="#") Показать еще
+
+mixin characteristics(items) 
+	.compare__characteristics
+		each item in items
+			.compare__item
+				.compare__title #{item}
+				.compare__text Характеристика
+				.compare__text Характеристика

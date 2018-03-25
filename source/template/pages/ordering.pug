@@ -1,0 +1,104 @@
+extends ../_template
+
+block variables
+	- var title = 'Новости'
+
+block content
+	.container
+		+breadcrumbs(['Главная', 'Оформление заказа'])
+
+		h1.main-title.main-title--underline Оформление заказа
+		.wrapper.ordering
+			.ordering__main
+				.ordering__section
+					.ordering__header
+						span.ordering__header-number 1
+						| Регион доставки
+					.ordering__block
+						.ordering__title Тип плательщика
+						input.radio(type="radio", id="type-1", name="type", checked="checked")
+						label.radio__label(for="type-1") - Частное лицо
+						input.radio(type="radio", id="type-2", name="type")
+						label.radio__label(for="type-2") - Компания
+					.ordering__block
+						.ordering__title.ordering__title--required Город
+						.ordering__block-wrapper
+							input.input.input--grey(type="text", value="Владивосток, Приморский край")
+							input.input.input--grey(type="text", placeholder="Город")
+						.ordering__note * Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"
+					.ordering__block.ordering__block--end
+						button.button.button--blue Далее
+				.ordering__section
+					.ordering__header
+						span.ordering__header-number 2
+						| Форма доставки
+					.ordering__block
+						input.radio(type="radio", id="delivery-1", name="delivery", checked="checked")
+						label.radio__label.radio__label--orange(for="delivery-1") - Доставка МЕБЕЛЬ
+						input.radio(type="radio", id="delivery-2", name="delivery")
+						label.radio__label(for="delivery-2") - Доставка МО, заказ 
+							span от 1000 руб.
+					.ordering__block.ordering__block--justify
+						button.button.button--blue Назад
+						button.button.button--blue Далее
+				.ordering__section
+					.ordering__header
+						span.ordering__header-number 3
+						| Оформление оплаты
+					.ordering__block.ordering__block--row
+						.radio__wrapper
+							.radio__block
+								.radio__image.radio__image--cash
+								input.radio(type="radio", id="pay-1", name="pay", checked="checked")
+								label.radio__label(for="pay-1") - Наличными при получении
+							.radio__block
+								.radio__image.radio__image--card
+								input.radio(type="radio", id="pay-2", name="pay")
+								label.radio__label(for="pay-2") - Банковской картой
+						.radio__wrapper
+							.radio__block
+								.radio__image.radio__image--bank
+								input.radio(type="radio", id="pay-3", name="pay")
+								label.radio__label(for="pay-3") - Банковский перевод
+							.radio__block
+								.radio__image.radio__image--yandex
+								input.radio(type="radio", id="pay-4", name="pay")
+								label.radio__label(for="pay-4") - Яндекс деньги
+					.ordering__block.ordering__block--justify
+						button.button.button--blue Назад
+						button.button.button--blue Далее
+				.ordering__section
+					.ordering__header
+						span.ordering__header-number 4
+						| Карточка покупателя
+					.ordering__block
+						.ordering__block-wrapper
+							.input__required
+								input.input.input--grey(type="text", placeholder="Имя и Фамилия полностью", required="required")
+							.input__required
+								input.input.input--grey(type="text", placeholder="Номер телефона", required="required")
+							.input__required
+								input.input.input--grey(type="text", placeholder="E-mail", required="required")
+							.input__required
+								input.input.input--grey(type="text", placeholder="Полный адрес доставки", required="required")
+							textarea.textarea(placeholder="Ваш комментарий")
+						.ordering__note * Обязательно для заполнения
+					.ordering__block.ordering__block--justify
+						button.button.button--blue Назад
+			aside.ordering__aside
+				.ordering__description
+					.ordering__description-row.ordering__description-row--tall
+						.ordering__description-title Товаров на:
+						.ordering__description-block
+							.ordering__description-price 15 000 руб.
+							.ordering__description-oldprice 17 000 руб.
+					.ordering__description-row
+						.ordering__description-title Скидка
+						.ordering__description-price 3 500 руб.
+					.ordering__description-row
+						.ordering__description-title Доставка
+						.ordering__description-price 1 500 руб.
+					.ordering__description-row.ordering__description-row--tall
+						.ordering__description-title Итого:
+						.ordering__description-sum 15 000 руб.
+				button.button.button--add2cart.button--width.button--right Формы оплаты

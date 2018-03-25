@@ -1,0 +1,84 @@
+.filter {
+
+	&__selected {
+		display: flex;
+
+		margin-bottom: 25px;
+
+		&-item {
+			font-size: 12px;
+
+			padding: 3px 20px;
+
+			border: 1px solid $grey;
+			border-radius: 25px;
+
+			&:not(:last-child) {
+				margin-right: 15px;
+			}
+		}
+	}
+
+	&__sort {
+		display: flex;
+		justify-content: space-between;
+
+		padding-bottom: 15px;
+		margin-bottom: 30px;
+
+		border-bottom: 1px solid $blue;
+
+		&-block {
+			display: flex;
+		}
+
+		&-link {
+			text-decoration: none;
+
+			color: $blue;
+
+			margin-left: 13px;
+		}
+
+		&-type {
+			display: block;
+
+			width: 18px;
+			height: 18px;
+
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+
+			& > svg {
+				fill: $text-grey;
+			}
+
+			&--active > svg {
+				fill: $blue;
+			}
+		}
+	}
+
+	&__aside {
+
+	}
+
+	&__block {
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+
+		border-bottom: 1px solid $grey;
+	}
+
+	&__title {
+		font-family: $bold;
+		font-size: 16px;
+
+		margin-bottom: 10px;
+	}
+
+	&__row {
+		display: flex;
+	}
+}

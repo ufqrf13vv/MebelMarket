@@ -22,8 +22,8 @@
 	}
 
 	&--buy1click {
-		color: #b4b4b4;
-		border: 1px solid #b4b4b4;
+		color: $text-grey;
+		border: 1px solid $text-grey;
 		background: transparent;
 	}
 
@@ -54,5 +54,20 @@
 
 	&--plus {
 		right: 0;
+	}
+
+	&--blue {
+		padding: 9px 28px;
+
+		background: $blue;
+		color: $white;
+	}
+
+	&--width {
+		width: 270px;
+	}
+
+	&--right {
+		margin-left: auto;
 	}
 }

@@ -2,6 +2,25 @@
 
 	&__main {
 		display: flex;
+
+		@include mobile {
+			flex-direction: column;	
+		}
+
+		@include tablet {
+			flex-direction: column;	
+		}
+
+		@include medium {
+			flex-direction: row;	
+		}
+	}
+
+	&__gallery {
+
+		@include medium {
+			width: 50%;	
+		}
 	}
 
 	&__info {
@@ -16,6 +35,22 @@
 
 		margin-right: 30px;
 		margin-bottom: 20px;
+
+		@include mobile {
+			margin-right: 0;	
+		}
+
+		@include tablet {
+			margin-right: 0;	
+		}
+
+		@include medium {
+			margin-right: 30px;	
+		}
+
+		& > img {
+			width: 100%;
+		}
 	}
 
 	&__icon {
@@ -71,6 +106,10 @@
 			background: $white;
 
 			border: 2px solid $main;
+
+			@include mobile {
+				padding: 5px;	
+			}
 		}
 
 		&-title {
@@ -80,7 +119,13 @@
 		}
 
 		& span {
+			display: inline-block;
+
 			margin-right: 20px;
+
+			@include mobile {
+				margin-bottom: 10px;	
+			}
 		}
 
 		& .warning {
@@ -101,6 +146,10 @@
 
 		padding: 4px 22px;
 
+		@include mobile {
+			padding: 4px;	
+		}
+
 		&:hover {
 			text-decoration: underline;
 		}
@@ -109,13 +158,41 @@
 	&__priceinfo {
 		display: flex;
 		justify-content: space-between;
+
+		@include mobile {
+			flex-direction: column;	
+		}
+
+		@include tablet {
+			flex-direction: row;
+
+			margin-bottom: 20px;	
+		}
+
+		@include medium {
+			margin-bottom: 0;	
+		}
 	}
 
 	&__block {
 		display: flex;
 		flex-direction: column;
 
-		width: 270px;
+		@include mobile {
+			margin-bottom: 15px;	
+		}
+
+		@include tablet {
+			width: 45%;	
+		}
+
+		@include medium {
+			width: 48%;	
+		}
+
+		@include desctop {
+			width: 270px;	
+		}
 
 		&--buttons {
 			justify-content: space-between;
@@ -178,6 +255,14 @@
 			font-size: 16px;
 
 			color: $black;
+
+			@include mobile {
+				width: auto;
+
+				font-size: 12px;	
+
+				padding: 5px;
+			}
 
 			&--active {
 				font-family: $bold;

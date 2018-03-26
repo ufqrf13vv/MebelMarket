@@ -11,21 +11,23 @@ block content
 
 		h1.main-title.main-title--underline Мебель
 
-		.wrapper.wrapper--justify
+		.wrapper.wrapper--justify.filter
 			aside.filter__aside
-				.filter__block
-					.filter__title Мягкая мебель
-					ul.filter__list
-						li.filter__item.filter__item--active
-							a.filter__link(href="#") Мягкие диваны и кушетки
-				.filter__block
-					.filter__title Мебель для кухни
-					+menu('filter', ['Пункт 1', 'Пункт 2', 'Пункт 3'])
-					a.filter__more(href="#") Еще
-				.filter__block
-					.filter__title Мебель для спальни
-					+menu('filter', ['Пункт 1', 'Пункт 2', 'Пункт 3'])
-					a.filter__more(href="#") Еще
+				a.filter__more.filter__more--mobile(href="#", id="filter") Уточнить раздел
+				.filter__aside-wrapper
+					.filter__block
+						.filter__title Мягкая мебель
+						ul.filter__list
+							li.filter__item.filter__item--active
+								a.filter__link(href="#") Мягкие диваны и кушетки
+					.filter__block
+						.filter__title Мебель для кухни
+						+menu('filter', ['Пункт 1', 'Пункт 2', 'Пункт 3'])
+						a.filter__more(href="#") Еще
+					.filter__block
+						.filter__title Мебель для спальни
+						+menu('filter', ['Пункт 1', 'Пункт 2', 'Пункт 3'])
+						a.filter__more(href="#") Еще
 			.filter__catalog
 				.catalog__novelties
 					.catalog__novelty-row

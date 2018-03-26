@@ -10,8 +10,38 @@
 		justify-content: space-between;
 		align-items: center;
 
+		@include mobile {
+			flex-direction: column;
+		}
+
+		@include tablet {
+			flex-direction: column;
+		}
+
+		@include medium {
+			flex-direction: row;
+		}
+
 		&--main {
 			padding: 20px 0;
+		}
+	}
+
+	&__links {
+		display: flex;
+
+		@include mobile {
+			flex-direction: column;
+
+			margin-bottom: 15px;
+		}
+
+		@include tablet {
+			margin-bottom: 20px;
+		}
+
+		@include medium {
+			margin-bottom: 0;
 		}
 	}
 
@@ -23,6 +53,30 @@
 		text-decoration: none;
 
 		color: $black;
+
+		@include mobile {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+
+		@include tablet {
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+
+		@include medium {
+			&:not(:last-child) {
+				margin-right: 5px;
+			}
+		}
+
+		@include desctop {
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+		}
 
 		& > svg {
 			width: 25px;
@@ -71,6 +125,26 @@
 
 	padding: 15px 0;
 
+	&__title {
+		text-align: center;
+	}
+
+	&__contacts {
+		display: flex;
+
+		@include mobile {
+			flex-direction: column;
+		}
+
+		@include medium {
+			flex-direction: column;
+		}
+
+		@include desctop {
+			flex-direction: row;
+		}
+	}
+
 	&__link {
 		color: $white;
 
@@ -108,14 +182,30 @@
 
 		text-decoration: none;
 
-		margin-right: 23px;
-
 		position: relative;
+
+		@include mobile {
+			margin-right: 0;
+			margin-bottom: 7px;
+		}
+
+		@include tablet {
+			margin-right: 23px;
+		}
+
+		@include medium {
+			margin-right: 0;
+			margin-bottom: 5px;
+		}
+
+		@include desctop {
+			margin-right: 23px;
+			margin-bottom: 0;
+		}
 
 		&::after {
 			content: '';
 
-			display: block;
 			width: 2px;
 			height: 100%;
 
@@ -125,6 +215,18 @@
 
 			background: $white;
 			border-right: 1px solid #61c6e3;
+
+			@include mobile {
+				display: none;
+			}
+
+			@include medium {
+				display: none;
+			}
+
+			@include desctop {
+				display: block;
+			}
 		}
 
 		&:hover {
@@ -134,5 +236,17 @@
 
 	&__menu {
 		display: flex;
+
+		@include mobile {
+			margin: 15px 0;
+		}
+
+		@include tablet {
+			margin: 10px 0;
+		}
+
+		@include medium {
+			margin: 0;
+		}
 	}
 }

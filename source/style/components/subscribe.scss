@@ -2,14 +2,30 @@
 	position: relative;
 
 	&__input {
-		width: 505px;
-
 		padding: 10px 165px 10px 10px;
 
 		border: none;
 		border-radius: 4px;
 
 		color: $black;
+
+		@include mobile {
+			width: 100%;
+			
+			padding: 10px 115px 10px 10px;	
+		}
+
+		@include tablet {
+			width: 100%;	
+		} 
+
+		@include medium {
+			width: 390px;	
+		}
+
+		@include desctop {
+			width: 505px;
+		}
 	}
 
 	&__submit {
@@ -24,5 +40,9 @@
 		position: absolute;
 		top: 0;
 		right: 0;
+
+		@include mobile {
+			padding: 10px;	
+		}
 	}
 }

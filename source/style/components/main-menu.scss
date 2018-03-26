@@ -3,9 +3,60 @@
 
 	position: relative;
 
+	@include mobile {
+		height: 40px;
+
+		border-bottom: 1px solid $grey;	
+	}
+
+	&__burger {
+
+		@include mobile {
+		    width: 25px;
+    		height: 25px;
+
+    		margin-left: 10px;
+
+			position: absolute;
+			top: 5px;
+
+			& > svg {
+				fill: $orange;
+			}
+		}
+
+		@include tablet {
+			display: none;	
+		}
+	}
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		@include mobile {
+			display: none;
+			
+			flex-direction: column;
+
+			width: 320px;
+
+			background: $white;
+			border: 1px solid $grey;
+
+			position: absolute;
+			top: 40px;
+
+			z-index: 10;
+		}
+
+		@include tablet {
+			flex-direction: column;	
+		}
+
+		@include medium {
+			flex-direction: row;	
+		}
 	}
 
 	&__list {
@@ -15,14 +66,36 @@
 		margin: 0;
 
 		list-style: none;
+
+		@include mobile {
+			flex-direction: column;	
+		}
+
+		@include tablet {
+			justify-content: space-around;	
+		}
 	}
 
 	&__item {
-		padding: 15px 0;
+
+		@include mobile {
+			padding: 10px 15px;
+		}
+
+		@include tablet {
+			padding: 15px 0;	
+		}
 	}
 
 	&__item:not(:last-child) {
-		margin-right: 27px;
+
+		@include medium {
+			margin-right: 13px;
+		}
+
+		@include desctop {
+			margin-right: 27px;	
+		}
 	}
 
 	&__item--parent:hover .submenu {

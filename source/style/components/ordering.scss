@@ -1,8 +1,23 @@
 .ordering {
 	justify-content: space-between;
 
+	@include mobile {
+		flex-direction: column;	
+	}
+
+	@include tablet {
+		flex-direction: row;	
+	}
+
 	&__main {
-		width: 67%;
+
+		@include mobile {
+			width: auto;	
+		}
+
+		@include tablet {
+			width: 67%;
+		}
 	}
 
 	&__section {
@@ -10,6 +25,10 @@
 		border-radius: 4px;
 
 		background: $white;
+
+		@include mobile {
+			margin-bottom: 20px;	
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 10px;
@@ -51,6 +70,14 @@
 	&__block {
 		padding: 27px 30px;
 
+		@include mobile {
+			padding: 10px;	
+		}
+
+		@include tablet {
+			padding: 27px 30px;
+		}
+
 		&--justify {
 			display: flex;
 			justify-content: space-between;
@@ -63,6 +90,18 @@
 
 		&--row {
 			display: flex;
+
+			@include mobile {
+				flex-direction: column;	
+			}
+
+			@include tablet {
+				flex-direction: column;	
+			}
+
+			@include medium {
+				flex-direction: row;	
+			}
 		}
 
 		&:not(:last-child) {
@@ -103,7 +142,14 @@
 	}
 
 	&__aside {
-		width: 30%;
+
+		@include mobile {
+			width: auto;	
+		}
+
+		@include tablet {
+			width: 30%;
+		}
 	}
 
 	&__description {
@@ -146,6 +192,14 @@
 			font-size: 26px;
 
 			color: $orange;
+
+			@include tablet {
+				font-size: 22px;	
+			}
+
+			@include medium {
+				font-size: 26px;	
+			}
 		}
 	}
 }

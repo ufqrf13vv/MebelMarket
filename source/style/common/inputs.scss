@@ -19,8 +19,6 @@
 	}
 
 	&--cart {
-		width: 130px;
-
 		font-family: $bold;
 
 		text-align: center;
@@ -30,6 +28,14 @@
 		color: $blue;
 
 		background: $main;
+
+		@include tablet {
+			width: 90px;	
+		}
+
+		@include medium {
+			width: 130px;	
+		}
 	}
 
 	&--grey {
@@ -146,15 +152,41 @@
 	}
 
 	&__wrapper:not(:last-child) {
-		margin-right: 30px;
+
+		@include mobile {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+
+		@include tablet {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+
+		@include medium {
+			&:not(:last-child) {
+				margin-right: 30px;
+				margin-bottom: 0;
+			}	
+		}
 	}
 
 	&__block {
 		display: flex;
 		align-items: center;
 
-		&:not(:last-child) {
-			margin-bottom: 20px;
+		@include mobile {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+
+		@include tablet {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}	
 		}
 	}
 

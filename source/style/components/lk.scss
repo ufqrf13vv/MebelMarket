@@ -1,5 +1,20 @@
 .lk {
 	flex-grow: 1;
+
+	&__wrapper {
+
+		@include mobile {
+			flex-direction: column;	
+		}
+
+		@include tablet {
+			flex-direction: column;	
+		}
+
+		@include medium {
+			flex-direction: row;	
+		}
+	}
 	
 	&__links {
 		display: flex;
@@ -33,6 +48,14 @@
 
 		border: 1px solid $grey;
 		border-radius: 4px;
+
+		@include mobile {
+			flex-direction: column;	
+		}
+
+		@include tablet {
+			flex-direction: row;	
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 30px;

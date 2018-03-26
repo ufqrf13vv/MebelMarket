@@ -21,6 +21,12 @@
 		color: $white;
 
 		text-align: center;
+
+		@include mobile {
+			padding: 15px;
+
+			font-size: 26px;
+		}
 	}
 
 	&__subheader {

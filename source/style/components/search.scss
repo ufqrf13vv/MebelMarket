@@ -1,13 +1,35 @@
 .search {
 	position: relative;
 
-	&__input {
-		width: 390px;
+	@include tablet {
+		margin-bottom: 20px;
+	}
 
+	@include medium {
+		margin-bottom: 0;
+	}
+
+	&__input {
 		border: 2px solid $grey;
 		border-radius: 4px;
 
 		padding: 10px 60px 10px 10px;
+
+		@include mobile {
+			margin-bottom: 20px;
+		}
+
+		@include tablet {
+			width: 390px;
+		}
+
+		@include medium {
+			width: auto;
+		}
+
+		@include desctop {
+			width: 390px;
+		}
 	}
 
 	&__submit {

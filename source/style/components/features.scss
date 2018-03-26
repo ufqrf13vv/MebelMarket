@@ -10,6 +10,19 @@
 		display: flex;
 		justify-content: space-between;
 
+		@include mobile {
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		@include tablet {
+			flex-direction: column;
+			align-items: center;	
+		}
+
+		@include medium {
+			flex-direction: row;	
+		}
 	}
 
 	&__item {
@@ -17,6 +30,18 @@
 		align-items: center;
 
 		width: 350px;
+
+		@include mobile {
+			margin-bottom: 20px;	
+		}
+
+		@include tablet {
+			margin-bottom: 20px;	
+		}
+
+		@include medium {
+			margin-bottom: 0;	
+		}
 	}
 
 	&__icon {

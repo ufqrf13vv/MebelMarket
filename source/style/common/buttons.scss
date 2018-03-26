@@ -16,9 +16,19 @@
 		opacity: .7;
 	}
 
+	@include mobile {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}	
+	}
+
 	&--add2cart {
 		color: $white;
 		background: $orange;
+
+		@include mobile {
+			width: 100%;	
+		}
 	}
 
 	&--buy1click {
@@ -64,7 +74,14 @@
 	}
 
 	&--width {
-		width: 270px;
+
+		@include tablet {
+			width: 100%;	
+		}
+
+		@include medium {
+			width: 270px;	
+		}
 	}
 
 	&--right {

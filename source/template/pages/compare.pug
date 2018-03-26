@@ -24,9 +24,12 @@ block content
 							.catalog__item-price 116 000 руб.
 							.catalog__item-oldprice 135 000 руб.
 						.catalog__item-links
-							a.catalog__item-cart(href="#") В корзину
-							a.catalog__item-favorite(href="#")
-							a.catalog__item-compare(href="#")
+							a.catalog__item-link.catalog__item-link--cart(href="#") В корзину
+								include ../../images/svg/shopping-cart.svg
+							a.catalog__item-link.catalog__item-link--small(href="#")
+								include ../../images/svg/star.svg
+							a.catalog__item-link.catalog__item-link--small(href="#")
+								include ../../images/svg/th-list.svg
 				.catalog__item.catalog__item--compare
 					a.cart__item-remove(href="#")
 					.catalog__item-image
@@ -38,8 +41,11 @@ block content
 							.catalog__item-price 116 000 руб.
 							.catalog__item-oldprice 135 000 руб.
 						.catalog__item-links
-							a.catalog__item-cart(href="#") В корзину
-							a.catalog__item-favorite(href="#")
-							a.catalog__item-compare(href="#")
+							a.catalog__item-link.catalog__item-link--cart(href="#") В корзину
+								include ../../images/svg/shopping-cart.svg
+							a.catalog__item-link.catalog__item-link--small(href="#")
+								include ../../images/svg/star.svg
+							a.catalog__item-link.catalog__item-link--small(href="#")
+								include ../../images/svg/th-list.svg
 			+characteristics(['№1 Тип характеристики', '№2 Тип характеристики', '№3 Тип характеристики', '№4 Тип характеристики', '№5 Тип характеристики', '№6 Тип характеристики', '№7 Тип характеристики'])
 

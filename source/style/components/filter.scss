@@ -1,7 +1,13 @@
 .filter {
 
+	@include mobile {
+		display: flex;
+		flex-direction: column;
+	}
+
 	&__selected {
 		display: flex;
+		flex-wrap: wrap;
 
 		margin-bottom: 25px;
 
@@ -24,6 +30,7 @@
 	&__sort {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 
 		padding-bottom: 15px;
 		margin-bottom: 30px;
@@ -108,14 +115,70 @@
 			top: 3px;
 			right: -20px;
 		}
+
+		&--mobile {
+			display: inline-block;
+
+			font-size: 16px;
+
+			color: $orange;
+
+			margin-bottom: 15px;
+
+			&::after {
+				border-color: inherit;
+			}
+
+			@include tablet {
+				display: none;	
+			}
+		}
 	}
 
 	&__aside {
 		width: 23%;
+
+		@include mobile {
+			width: 100%;
+
+			position: relative;
+		}
+
+		@include tablet {
+			width: 23%;	
+		}
+
+		&-wrapper {
+
+			@include mobile {
+				display: none;
+
+				width: 100%;
+
+				background: $main;
+
+				position: absolute;
+
+				z-index: 10;
+
+			}
+
+			@include tablet {
+				position: relative;	
+			}
+		}
 	}
 
 	&__catalog {
 		width: 74%;
+
+		@include mobile {
+			width: 100%;	
+		}
+
+		@include tablet {
+			width: 74%;	
+		}
 	}
 
 	&__block {
@@ -123,6 +186,15 @@
 		margin-bottom: 20px;
 
 		border-bottom: 1px solid $grey;
+
+		@include mobile {
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}	
+		}
 	}
 
 	&__title {
@@ -134,6 +206,14 @@
 
 	&__row {
 		display: flex;
+
+		@include tablet {
+			flex-wrap: wrap;
+		}
+
+		@include medium {
+			flex-wrap: nowrap;	
+		}
 
 		&--justify {
 			justify-content: space-between;

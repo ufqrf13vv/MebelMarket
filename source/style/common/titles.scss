@@ -4,6 +4,10 @@
 
 	color: $blue;
 
+	@include mobile {
+		font-size: 25px;	
+	}
+
 	&--underline {
 		padding-bottom: 15px;
 		

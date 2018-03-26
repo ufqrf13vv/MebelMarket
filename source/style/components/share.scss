@@ -7,6 +7,10 @@
 
 	margin-bottom: 60px;
 
+	@include mobile {
+		justify-content: center;	
+	}
+
 	&__icon {
 		width: 26px;
 		height: 20px;

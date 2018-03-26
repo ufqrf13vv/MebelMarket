@@ -5,9 +5,15 @@
 
 	margin-bottom: 30px;
 
-	&__item {
-		width: 270px;
+	@include tablet {
+		justify-content: space-around;	
+	}
 
+	@include medium {
+		justify-content: space-between;	
+	}
+
+	&__item {
 		border: 1px solid $grey;
 		border-radius: 3px;
 
@@ -15,11 +21,25 @@
 
 		margin-bottom: 30px;
 
+		@include mobile {
+			width: auto;	
+		}
+
+		@include tablet {
+			width: 270px;
+		}
+
 		&--compare {
 			position: relative;
 
 			&:not(:last-child) {
 				margin-right: 30px;
+			}
+
+			@include mobile {
+				&:not(:last-child) {
+					margin-right: 0;
+				}
 			}
 		}
 
@@ -28,6 +48,10 @@
 		}
 
 		&-image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			
 			padding: 10px;
 		}
 
@@ -173,13 +197,34 @@
 
 		position: relative;
 
+		@include mobile {
+			width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+
+		@include tablet {
+			width: 66%;	
+		}
+
 		&--small {
 			width: 30%;
+
+			@include mobile {
+				width: 100%;	
+			}
+
+			@include tablet {
+				width: 30%;	
+			}
 		}
 
 		&-row {
 			display: flex;
 			justify-content: space-between;
+			flex-wrap: wrap;
 
 			&:not(:last-child) {
 				margin-bottom: 30px;
@@ -201,6 +246,20 @@
 			position: absolute;
 			left: 15px;
 			bottom: 15px;
+
+			@include mobile {
+				width: auto;
+
+				font-size: 18px;	
+			}
+
+			@include tablet {
+				width: auto;	
+			}
+
+			@include medium {
+				width: 365px;
+			}
 
 			&--small {
 				width: auto;
@@ -241,6 +300,14 @@
 
 		background: $orange;
 		border-radius: 4px;
+
+		@include mobile {
+			width: 100%;
+
+			text-align: center;
+
+			padding: 13px 0;	
+		}
 
 		&--black {
 			color: $black;

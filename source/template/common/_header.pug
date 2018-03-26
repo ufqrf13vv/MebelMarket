@@ -14,21 +14,24 @@ header.header
 	.header-main
 		.container
 			.header__wrapper.header__wrapper--main
-				a.logo(href="#")
+				a.logo(href="index.html")
 					img(src="/assets/img/logo.png", alt="logo")
 				form.search
 					input.search__input(type="text" placeholder="Найти среди более 5 000 товаров...")
 					input.search__submit(type="submit")
-				a.header__link(href="#") Избранное
-					include ../../images/svg/star.svg
-				a.header__link(href="#") Сравнение
-					include ../../images/svg/th-list.svg
-				a.header__link.header__link--active(href="#") Корзина
-					include ../../images/svg/shopping-cart.svg
+				.header__links
+					a.header__link(href="#") Избранное
+						include ../../images/svg/star.svg
+					a.header__link(href="#") Сравнение
+						include ../../images/svg/th-list.svg
+					a.header__link.header__link--active(href="#") Корзина
+						include ../../images/svg/shopping-cart.svg
 				a.header__link(href="news.html")
 					img(src="/assets/img/user.png")
 	.main-menu
 		.container
+			a.main-menu__burger(href="#", id="menu")
+				include ../../images/svg/bars.svg
 			.main-menu__wrapper
 				ul.main-menu__list
 					li.main-menu__item.main-menu__item--parent

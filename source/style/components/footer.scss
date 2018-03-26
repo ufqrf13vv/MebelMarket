@@ -4,6 +4,10 @@
 		font-size: 16px;
 
 		padding: 57px 0;
+
+		@include mobile {
+			padding: 27px 0;	
+		}
 	}
 
 	&__wrapper {
@@ -11,12 +15,36 @@
 		justify-content: space-between;
 		align-items: center;
 
+		@include mobile {
+			flex-direction: column;	
+		}
+
+		@include tablet {
+			flex-direction: column;
+		}
+
+		@include medium {
+			flex-direction: row;	
+		}
+
 		&--top {
 			align-items: flex-start;
+
+			@include tablet {
+				flex-direction: row;
+				flex-wrap: wrap;	
+			}
 		}
 
 		&--left {
 			justify-content: flex-start;
+		}
+	}
+
+	&__column {
+
+		@include mobile {
+			margin-bottom: 20px;	
 		}
 	}
 

@@ -9,26 +9,29 @@ block variables
 block content
 	.slider.slider--main
 		.container
-			.slider__wrapper
-				.slider__arrow.slider__arrow--left
-				.slider__arrow.slider__arrow--right
+			.slider__wrapper#main-slider
 				.slider__slide
 					img(src="/assets/img/slide.png")
-					.slider__slide-info
+					a.slider__slide-info(href="#")
 						.slider__slide-text Новое поступление постельного белья
 						.slider__slide-price от 5000 рублей
-				ul.slider__dots
-					li.slider__dots-item
-					li.slider__dots-item.slider__dots-item--current
-					li.slider__dots-item
-					li.slider__dots-item
+				.slider__slide
+					img(src="/assets/img/slide.png")
+					a.slider__slide-info(href="#")
+						.slider__slide-text Новое поступление постельного белья
+						.slider__slide-price от 6000 рублей
+				.slider__slide
+					img(src="/assets/img/slide.png")
+					a.slider__slide-info(href="#")
+						.slider__slide-text Новое поступление постельного белья
+						.slider__slide-price от 7000 рублей
 		
 	section.section
 		.section__title 
 			.container
 				h2.main-title Лидеры продаж
 		.container
-			+catalogItems(catalogItems, iconsLeader)
+			+catalogItems(catalogItems, iconsLeader, '')
 			.catalog__footer
 				a.catalog__showmore(href="#") Показать еще
 	section.section
@@ -36,7 +39,7 @@ block content
 			.container
 				h2.main-title Акции и скидки
 		.container
-			+catalogItems(catalogItems, iconsSale)
+			+catalogItems(catalogItems, iconsSale, '')
 			.catalog__footer
 				a.catalog__showmore(href="#") Показать еще
 	section.section
@@ -44,7 +47,7 @@ block content
 			.container
 				h2.main-title Новинки
 		.container
-			+catalogItems(catalogItems, iconsNew)
+			+catalogItems(catalogItems, iconsNew, '')
 			.catalog__footer
 				a.catalog__showmore(href="#") Показать еще
 
@@ -54,21 +57,27 @@ block content
 				h2.main-title Недавно вы смотрели
 		.slider
 			.container
-				.slider__wrapper.slider__wrapper--small
-					.slider__arrow.slider__arrow--left
-					.slider__arrow.slider__arrow--right
+				.slider__wrapper.slider__wrapper--small#small-slider
 					.slider__slide.slider__slide--small
-						.slider__image
+						a.slider__image(href="#")
 							img(src="/assets/img/slide-1.png")
-						.slider__text Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
+						a.slider__text(href="#") Спальный гарнитур Аллегро белый с 5-ти дверным шкафом
 					.slider__slide.slider__slide--small
-						.slider__image
+						a.slider__image(href="#")
 							img(src="/assets/img/slide-1.png")
-						.slider__text Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
+						a.slider__text(href="#") Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
 					.slider__slide.slider__slide--small
-						.slider__image
+						a.slider__image(href="#")
 							img(src="/assets/img/slide-1.png")
-						.slider__text Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
+						a.slider__text(href="#") Спальный гарнитур Аллегро белый с 7-ти дверным шкафом
+					.slider__slide.slider__slide--small
+						a.slider__image(href="#")
+							img(src="/assets/img/slide-1.png")
+						a.slider__text(href="#") Спальный гарнитур Аллегро белый с 8-ти дверным шкафом
+					.slider__slide.slider__slide--small
+						a.slider__image(href="#")
+							img(src="/assets/img/slide-1.png")
+						a.slider__text(href="#") Спальный гарнитур Аллегро белый с 9-ти дверным шкафом
 
 	section.features
 		.container

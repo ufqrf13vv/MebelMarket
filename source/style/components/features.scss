@@ -32,10 +32,14 @@
 		width: 350px;
 
 		@include mobile {
+			width: auto;
+
 			margin-bottom: 20px;	
 		}
 
 		@include tablet {
+			width: 350px;
+
 			margin-bottom: 20px;	
 		}
 
@@ -52,16 +56,33 @@
 
 		margin-right: 20px;
 
+		@include mobile {
+			width: 85px;
+			height: 85px;	
+		}
+
 		&--good {
 			background: url('../img/features.png') no-repeat 10px 15px, $blue;
+
+			@include mobile {
+				background-position: 5px 10px;	
+			}
 		}
 
 		&--delivery {
-			background: url('../img/features.png') no-repeat -103px 18px, $blue;
+			background: url('../img/features.png') no-repeat -113px 10px, $blue;
+
+			@include mobile {
+				background-position: -113px 11px;	
+			}
 		}
 
 		&--pay {
 			background: url('../img/features.png') no-repeat -236px 18px, $blue;
+
+			@include mobile {
+				background-position: -242px 10px;	
+			}
 		}
 	}
 

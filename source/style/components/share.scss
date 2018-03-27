@@ -12,28 +12,24 @@
 	}
 
 	&__icon {
-		width: 26px;
 		height: 20px;
 
-		&--fb {
-			background: url('../img/soc-icons.png') no-repeat -37px 0;
+		& > svg {
+			height: 20px;
 
+			fill: $text-grey;
 		}
 
-		&--in {
-			background: url('../img/soc-icons.png') no-repeat -124px 0;
+		&:hover > svg {
+			fill: $orange;
 		}
 
-		&--ok {
-			background: url('../img/soc-icons.png') no-repeat -75px 0;
+		&:first-child {
+			margin-left: 15px;
 		}
-
-		&--tw {
-			background: url('../img/soc-icons.png') no-repeat -166px 0;
-		}
-
-		&--vk {
-			background: url('../img/soc-icons.png') no-repeat 0 0;
+		
+		&:not(:last-child) {
+			margin-right: 20px;
 		}
 	}
 }

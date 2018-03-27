@@ -9,11 +9,11 @@ block content
 
 		h1.main-title Столы для кухни
 		.filter__selected
-			.filter__selected-item esta
-			.filter__selected-item HABUFA
-			.filter__selected-item Круглый
-			.filter__selected-item Овальный
-			.filter__selected-item Дерево
+			a.filter__selected-item(href="#") esta
+			a.filter__selected-item(href="#") HABUFA
+			a.filter__selected-item(href="#") Круглый
+			a.filter__selected-item(href="#") Овальный
+			a.filter__selected-item(href="#") Дерево
 		.filter__sort
 			.filter__sort-block Сортировать:
 				a.filter__sort-link(href="#") по популярности
@@ -77,7 +77,7 @@ block content
 					.filter__footer
 						button.button.button--buy1click Сбросить
 			.filter__catalog
-				+catalogItems(catalogItems, iconsLeader)
+				+catalogItems(catalogItems, iconsLeader, 'catalog__item--filter')
 				.pagination
 					a.pagination__item(href="#") 1
 					.pagination__dots

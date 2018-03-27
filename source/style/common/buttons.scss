@@ -16,12 +16,6 @@
 		opacity: .7;
 	}
 
-	@include mobile {
-		&:not(:last-child) {
-			margin-bottom: 10px;
-		}	
-	}
-
 	&--add2cart {
 		color: $white;
 		background: $orange;

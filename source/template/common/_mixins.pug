@@ -38,19 +38,19 @@ mixin catalogMenu(items)
 						a(href="#") #{sub}
 
 
-mixin catalogItems(items, icons)
+mixin catalogItems(items, icons, secondClass)
 	.catalog
 		each item in items
-			.catalog__item
+			.catalog__item(class=`${secondClass}`)
 				if icons
 					.catalog__item-icons
 						each icon in icons
 							| !{icon}
-				.catalog__item-image
+				a.catalog__item-image(href="#")
 					img(src=`${item.img}`)
 				.catalog__item-description
-					.catalog__item-category #{item.section}
-					.catalog__item-name #{item.name}
+					a.catalog__item-category(href="#") #{item.section}
+					a.catalog__item-name(href="#") #{item.name}
 					.catalog__item-prices
 						.catalog__item-price #{item.price}
 						if item.oldprice

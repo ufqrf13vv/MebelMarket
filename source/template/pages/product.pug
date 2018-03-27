@@ -39,9 +39,9 @@ block content
 					.product__priceinfo
 						.product__block.product__block--quantity
 							.product__count
-								button.button.button--minus(href="#") -
+								button.button.button--minus -
 								input.input.input--count(type="text", value="1")
-								button.button.button--plus(href="#") +
+								button.button.button--plus +
 							.product__oldprice 1 700 руб.
 							.product__price 1 500 руб.
 						.product__block.product__block--buttons
@@ -49,11 +49,16 @@ block content
 							a.button.button--buy1click(href="#") Купить в 1 клик
 							a.button.button--credit(href="#") В кредит
 			.share Поделиться: 
-				a.share__icon.share__icon--fb(href="#")
-				a.share__icon.share__icon--in(href="#")
-				a.share__icon.share__icon--ok(href="#")
-				a.share__icon.share__icon--tw(href="#")
-				a.share__icon.share__icon--vk(href="#")
+				a.share__icon(href="#")
+					include ../../images/svg/facebook-f.svg
+				a.share__icon(href="#")
+					include ../../images/svg/instagram.svg
+				a.share__icon(href="#")
+					include ../../images/svg/odnoklassniki.svg
+				a.share__icon(href="#")
+					include ../../images/svg/twitter.svg
+				a.share__icon(href="#")
+					include ../../images/svg/vk.svg
 			.product__tabs
 				span#tab2
 				span#tab3

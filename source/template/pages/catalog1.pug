@@ -32,19 +32,19 @@ block content
 				.catalog__novelties
 					.catalog__novelty-row
 						.catalog__novelty(style="background: url('../assets/img/nov-1.jpg') no-repeat 0 0; background-size: cover;")
-							.catalog__novelty-desc Новое поступление гарнитуров от 25 000 руб.
+							a.catalog__novelty-desc(href="#") Новое поступление гарнитуров от 25 000 руб.
 						.catalog__novelty.catalog__novelty--small(style="background: url('../assets/img/nov-2.jpg') no-repeat 0 0; background-size: cover;")
-							.catalog__novelty-desc.catalog__novelty-desc--small Новое поступление гарнитуров от 25 000 руб.
+							a.catalog__novelty-desc.catalog__novelty-desc--small(href="#") Новое поступление гарнитуров от 25 000 руб.
 					.catalog__novelty-row
 						.catalog__novelty.catalog__novelty--small(style="background: url('../assets/img/nov-3.jpg') no-repeat 0 0; background-size: cover;")
-							.catalog__novelty-desc.catalog__novelty-desc--small Новое поступление гарнитуров от 25 000 руб.
+							a.catalog__novelty-desc.catalog__novelty-desc--small(href="#") Новое поступление гарнитуров от 25 000 руб.
 						.catalog__novelty(style="background: url('../assets/img/nov-4.jpg') no-repeat 0 0; background-size: cover;")
-							.catalog__novelty-desc Новое поступление гарнитуров от 25 000 руб.
+							a.catalog__novelty-desc(href="#") Новое поступление гарнитуров от 25 000 руб.
 				h2.main-title.main-title--black Лидеры продаж
-				+catalogItems(catalogItems, iconsLeader)
+				+catalogItems(catalogItems, iconsLeader, 'catalog__item--filter')
 				.catalog__footer
 					a.catalog__showmore.catalog__showmore--black(href="#") Показать еще
 				h2.main-title.main-title--black Акции и скидки
-				+catalogItems(catalogItems, iconsSale)
+				+catalogItems(catalogItems, iconsSale, 'catalog__item--filter')
 				.catalog__footer
 					a.catalog__showmore.catalog__showmore--black(href="#") Показать еще

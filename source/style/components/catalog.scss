@@ -1,16 +1,15 @@
 .catalog {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 
 	margin-bottom: 30px;
 
 	@include tablet {
-		justify-content: space-around;	
+		justify-content: space-around;
 	}
 
 	@include medium {
-		justify-content: space-between;	
+		justify-content: flex-start;	
 	}
 
 	&__item {
@@ -26,7 +25,54 @@
 		}
 
 		@include tablet {
-			width: 270px;
+			width: calc(50% - 40px);
+		}
+
+		@include medium {
+			width: calc(35% - 40px);
+
+			&:not(:nth-child(3n)) {
+				margin-right: 36px;
+			}
+		}
+
+		@include desctop {
+			width: calc(25% - 20px);
+
+			&:not(:nth-child(3n)) {
+				margin-right: 0;
+			}
+
+			&:not(:nth-child(4n)) {
+				margin-right: 26px;
+			}
+		}
+
+		&--filter {
+
+			@include medium {
+				width: calc(50% - 40px);
+
+				&:not(:nth-child(3n)) {
+					margin-right: 0;
+				}
+
+				&:not(:nth-child(2n)) {
+					margin-right: 80px;
+				}
+			}
+
+			@include desctop {
+				width: calc(35% - 40px);
+
+				&:not(:nth-child(4n)) {
+					margin-right: 0;
+				}
+
+				&:not(:nth-child(3n)) {
+					margin-right: 38px;
+				}
+			}
 		}
 
 		&--compare {
@@ -53,6 +99,10 @@
 			align-items: center;
 			
 			padding: 10px;
+
+			& > img {
+				width: 100%;
+			}
 		}
 
 		&-icons {
@@ -97,13 +147,23 @@
 		}
 
 		&-category {
+			display: block;
+
+			text-decoration: none;
 			text-align: center;
+
 			color: $lgrey;
 
 			margin-bottom: 15px;
+
+			&:hover {
+				opacity: .7;
+			}
 		}
 
 		&-name {
+			display: block;
+
 			font-size: 16px;
 			line-height: 24px;
 
@@ -113,6 +173,10 @@
 			text-decoration: none;
 
 			padding: 0 10px 15px 10px;
+
+			&:hover {
+				opacity: .7;
+			}
 		}
 
 		&-prices {
@@ -241,7 +305,9 @@
 			padding: 15px;
 
 			color: $white;
-			background: rgba(247, 158, 55, 0.9);;
+			background: rgba(247, 158, 55, 0.9);
+
+			text-decoration: none;
 
 			position: absolute;
 			left: 15px;
@@ -307,6 +373,14 @@
 			text-align: center;
 
 			padding: 13px 0;	
+		}
+
+		@include tablet {
+			padding: 13px 150px;	
+		}
+
+		@include medium {
+			padding: 13px 220px;
 		}
 
 		&--black {

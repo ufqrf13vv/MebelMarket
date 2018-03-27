@@ -24,6 +24,14 @@ button:focus {
 	outline: none;
 }
 
+button {
+	cursor: pointer;
+}
+
+label {
+	cursor: pointer;
+}
+
 img {
 	display: block;
 }
@@ -65,4 +73,8 @@ img {
 
 .grey {
 	color: $text-grey;
+}
+
+a:hover {
+	text-decoration: none;
 }

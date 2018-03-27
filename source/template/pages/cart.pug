@@ -11,20 +11,20 @@ block content
 			h2.main-title.main-title--underline Корзина товаров (1)
 			.cart__items
 				.cart__item
-					.cart__image
+					a.cart__image(href="#")
 						img(src="/assets/img/product-2.png")
 					a.cart__title(href="#") Спальный гарнитур Аллегро белый с 6-ти дверным шкафом
 					.cart__prices
-						.cart__price 116 000 руб.
-						.cart__oldprice 135 000 руб.
-					.product__count
+						.cart__price#price 15 500 руб.
+						.cart__oldprice 17 5000 руб.
+					.product__count#cart-count
 						button.button.button--minus(href="#") -
 						input.input.input--cart(type="text", value="1")
 						button.button.button--plus(href="#") +
 					a.cart__item-remove(href="#")
 			.cart__total
 				.cart__total-text Итоговая сумма:
-				.cart__total-price 15 500 руб.
+				.cart__total-price#total 15 500 руб.
 			.cart__buttons
 				a.button.button--credit.cart__btn(href="#") Продолжить покупки
 				a.button.button--add2cart.cart__btn(href="#") Оформить заказ

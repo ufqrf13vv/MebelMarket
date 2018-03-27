@@ -16,6 +16,10 @@
 
 			padding: 3px 20px;
 
+			text-decoration: none;
+
+			color: $black;
+
 			border: 1px solid $grey;
 			border-radius: 25px;
 
@@ -123,14 +127,18 @@
 
 			color: $orange;
 
+			padding-right: 20px;
 			margin-bottom: 15px;
 
 			&::after {
 				border-color: inherit;
+				
+				top: 5px;
+				right: 0;
 			}
 
 			@include tablet {
-				display: none;	
+				display: none;
 			}
 		}
 	}
@@ -156,6 +164,8 @@
 				width: 100%;
 
 				background: $main;
+
+				padding: 0 13px;
 
 				position: absolute;
 

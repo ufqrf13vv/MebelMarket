@@ -107,5 +107,33 @@
         		}
     		}]
   		});
+
+  		$('.filter__more').on('click', function(e) {
+  			e.preventDefault();
+
+  			var list = $(this).siblings('.filter__list');
+
+  			if ($(this).hasClass('filter__more--active')) {
+  				$(this).removeClass('filter__more--active');
+  				list.height(70);
+  				$(this).text('Еще');
+  			} else {
+  				$(this).addClass('filter__more--active');
+  				list.height('auto');
+  				$(this).text('Скрыть');
+  			}
+  		});
+
+  		$('.product__thumbs-item').on('click', function() {
+  			var src = $(this).children('img').attr('src');
+  			var productImage = $('#product-image').children('img');
+
+  			if (!$(this).hasClass('product__thumbs-item--active')) {
+  				$(this).addClass('product__thumbs-item--active');
+  				$(this).siblings('.product__thumbs-item--active').removeClass('product__thumbs-item--active');
+  			}
+			
+			productImage.attr('src', src);
+  		})
   	});
 })();

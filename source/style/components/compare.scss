@@ -1,41 +1,88 @@
 .compare {
 
-	&__wrapper {
+	&__table {
 		display: flex;
-		justify-content: center;
 
-		margin-bottom: 30px;
+		border-collapse: collapse;
 
-		@include mobile {
-			flex-direction: column;	
-		}
-	}
-
-	&__characteristics {
-		border: 1px solid $grey;
-		border-radius: 4px;
-
-		background: $white;
-	}
-
-	&__item {
-		display: flex;
-		justify-content: space-between;
-
-		padding: 19px;
-
-		@include mobile {
+		&-thead {
+			display: flex;
 			flex-direction: column;
+			justify-content: flex-end;
+		    flex-shrink: 0;
+
+		    padding-bottom: 17px;
+
+		    @include desctop {
+		    	padding-bottom: 0;	
+		    }
+		}
+
+		&-th {
+			background: $white;
+
+			padding: 19px 10px;
+
+			border-left: 1px solid $grey;
+			border-top: 1px solid $grey;
+
+			@include mobile {
+				font-size: 12px;	
+			}
+
+			&:last-child {
+				border-bottom: 1px solid $grey;
+			}
+		}
+
+		&-tr {
+			display: flex;
+			flex-direction: column;
+			flex-shrink: 0;
+		}
+
+		&-tbody {
+			display: flex;
+
+		    position: relative;
+
+		    overflow-x: auto;
+		    overflow-y: hidden;
+		}
+
+		&-td {
+			background: $white;
+
+			padding: 19px 15px;
+
+			text-align: center;
 			
-			padding: 7px;	
-		}
+			&:nth-child(n+2) {
+				border-top: 1px solid $grey;
+			}
 
-		&:not(:last-child) {
-			border-bottom: 1px solid $grey;
-		}
-	}
+			&:last-child {
+				border-bottom: 1px solid $grey;
+			}
 
-	&__title {
-		font-family: $bold;
+			&--item {
+				background: transparent;
+				
+				padding-top: 0;
+				padding-bottom: 30px;
+			}
+
+			&--right {
+				border-right: 1px solid $grey;
+			}
+
+			&--first {
+				padding-left: 0;
+			}
+
+			&--last {
+				padding-right: 0;
+			}
+		}
 	}
 }

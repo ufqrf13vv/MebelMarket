@@ -28,6 +28,8 @@
 	}
 
 	&__image {
+		height: 320px;
+
 		border: 1px solid $grey;
 		border-radius: 4px;
 
@@ -45,11 +47,18 @@
 		}
 
 		@include medium {
+			width: 90%;
+
 			margin-right: 30px;	
+		}
+
+		@include desctop {
+			width: 570px;	
 		}
 
 		& > img {
 			width: 100%;
+			height: 100%;
 		}
 	}
 
@@ -69,6 +78,8 @@
 			height: 55px;
 
 			border: 1px solid $grey;
+
+			cursor: pointer;
 
 			&--active {
 				border: 2px solid $orange;

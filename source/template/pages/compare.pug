@@ -11,41 +11,93 @@ block content
 		.lk__links
 			a.lk__link(href="#") Все характерисики
 			a.lk__link.lk__link--active(href="#") Различающиеся
+
 		.compare
-			.compare__wrapper
-				.catalog__item.catalog__item--compare
-					a.cart__item-remove(href="#")
-					.catalog__item-image
-						img(src="/assets/img/product-1.jpg")
-					.catalog__item-description
-						.catalog__item-category Категория
-						.catalog__item-name Наименование товара
-						.catalog__item-prices
-							.catalog__item-price 116 000 руб.
-							.catalog__item-oldprice 135 000 руб.
-						.catalog__item-links
-							a.catalog__item-link.catalog__item-link--cart(href="#") В корзину
-								include ../../images/svg/shopping-cart.svg
-							a.catalog__item-link.catalog__item-link--small(href="#")
-								include ../../images/svg/star.svg
-							a.catalog__item-link.catalog__item-link--small(href="#")
-								include ../../images/svg/th-list.svg
-				.catalog__item.catalog__item--compare
-					a.cart__item-remove(href="#")
-					.catalog__item-image
-						img(src="/assets/img/product-1.jpg")
-					.catalog__item-description
-						.catalog__item-category Категория
-						.catalog__item-name Наименование товара
-						.catalog__item-prices
-							.catalog__item-price 116 000 руб.
-							.catalog__item-oldprice 135 000 руб.
-						.catalog__item-links
-							a.catalog__item-link.catalog__item-link--cart(href="#") В корзину
-								include ../../images/svg/shopping-cart.svg
-							a.catalog__item-link.catalog__item-link--small(href="#")
-								include ../../images/svg/star.svg
-							a.catalog__item-link.catalog__item-link--small(href="#")
-								include ../../images/svg/th-list.svg
-			+characteristics(['№1 Тип характеристики', '№2 Тип характеристики', '№3 Тип характеристики', '№4 Тип характеристики', '№5 Тип характеристики', '№6 Тип характеристики', '№7 Тип характеристики'])
+			table.compare__table
+				thead.compare__table-thead
+					tr.compare__table-tr
+						th.compare__table-th №1 Тип Характеристики
+						th.compare__table-th №2 Тип Характеристики
+						th.compare__table-th №3 Тип Характеристики
+						th.compare__table-th №4 Тип Характеристики
+						th.compare__table-th №5 Тип Характеристики
+						th.compare__table-th №6 Тип Характеристики
+				tbody.compare__table-tbody
+					tr.compare__table-tr
+						td.compare__table-td.compare__table-td--item.compare__table-td--first
+							.catalog__item.catalog__item--compare
+								a.cart__item-remove(href="#")
+								a.catalog__item-image(href="#")
+									img(src="/assets/img/product-1.jpg")
+								.catalog__item-description
+									a.catalog__item-category(href="#") Категория
+									a.catalog__item-name(href="#") Наименование товара
+									.catalog__item-prices
+										.catalog__item-price 116 000 руб.
+										.catalog__item-oldprice 135 000 руб.
+									.catalog__item-links
+										a.catalog__item-link.catalog__item-link--cart(href="#") В корзину
+											include ../../images/svg/shopping-cart.svg
+										a.catalog__item-link.catalog__item-link--small(href="#")
+											include ../../images/svg/star.svg
+										a.catalog__item-link.catalog__item-link--small(href="#")
+											include ../../images/svg/th-list.svg
+						td.compare__table-td Характеристика
+						td.compare__table-td Характеристика
+						td.compare__table-td Характеристика
+						td.compare__table-td Характеристика
+						td.compare__table-td Характеристика
+						td.compare__table-td Характеристика
+					tr.compare__table-tr
+						td.compare__table-td.compare__table-td--item
+							.catalog__item.catalog__item--compare
+								a.cart__item-remove(href="#")
+								a.catalog__item-image(href="#")
+									img(src="/assets/img/product-1.jpg")
+								.catalog__item-description
+									a.catalog__item-category(href="#") Категория
+									a.catalog__item-name(href="#") Наименование товара
+									.catalog__item-prices
+										.catalog__item-price 116 000 руб.
+										.catalog__item-oldprice 135 000 руб.
+									.catalog__item-links
+										a.catalog__item-link.catalog__item-link--cart(href="#") В корзину
+											include ../../images/svg/shopping-cart.svg
+										a.catalog__item-link.catalog__item-link--small(href="#")
+											include ../../images/svg/star.svg
+										a.catalog__item-link.catalog__item-link--small(href="#")
+											include ../../images/svg/th-list.svg
+						td.compare__table-td Характеристика
+						td.compare__table-td Характеристика
+						td.compare__table-td Характеристика
+						td.compare__table-td Характеристика
+						td.compare__table-td Характеристика
+						td.compare__table-td Характеристика
+					tr.compare__table-tr
+						td.compare__table-td.compare__table-td--item.compare__table-td--last
+							.catalog__item.catalog__item--compare
+								a.cart__item-remove(href="#")
+								a.catalog__item-image(href="#")
+									img(src="/assets/img/product-1.jpg")
+								.catalog__item-description
+									.catalog__item-category Категория
+									.catalog__item-name Наименование товара
+									.catalog__item-prices
+										.catalog__item-price 116 000 руб.
+										.catalog__item-oldprice 135 000 руб.
+									.catalog__item-links
+										a.catalog__item-link.catalog__item-link--cart(href="#") В корзину
+											include ../../images/svg/shopping-cart.svg
+										a.catalog__item-link.catalog__item-link--small(href="#")
+											include ../../images/svg/star.svg
+										a.catalog__item-link.catalog__item-link--small(href="#")
+											include ../../images/svg/th-list.svg
+						td.compare__table-td.compare__table-td--right Характеристика
+						td.compare__table-td.compare__table-td--right Характеристика
+						td.compare__table-td.compare__table-td--right Характеристика
+						td.compare__table-td.compare__table-td--right Характеристика
+						td.compare__table-td.compare__table-td--right Характеристика
+						td.compare__table-td.compare__table-td--right Характеристика
+
+
 

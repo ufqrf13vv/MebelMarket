@@ -74,11 +74,17 @@
 	}
 
 	&__list {
+		height: 70px;
+
 		list-style: none;
 
 		padding-left: 0;
 		margin: 0;
 		margin-bottom: 3px;
+
+		transition: all 0.5s ease-in-out;
+
+		overflow-y: hidden;
 	}
 
 	&__item:hover,
@@ -101,6 +107,8 @@
 
 		color: inherit;
 
+		padding-right: 20px;
+
 		position: relative;
 
 		&::after {
@@ -117,7 +125,15 @@
 
 			position: absolute;
 			top: 3px;
-			right: -20px;
+			right: 0;
+		}
+
+		&:hover {
+			color: $orange;
+
+			&::after {
+				border-color: inherit;
+			}
 		}
 
 		&--mobile {
@@ -140,6 +156,11 @@
 			@include tablet {
 				display: none;
 			}
+		}
+
+		&--active::after {
+			top: 7px;
+			transform: rotate(135deg);
 		}
 	}
 

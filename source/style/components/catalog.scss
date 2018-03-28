@@ -21,7 +21,7 @@
 		margin-bottom: 30px;
 
 		@include mobile {
-			width: auto;	
+			width: auto;
 		}
 
 		@include tablet {
@@ -78,12 +78,33 @@
 		&--compare {
 			position: relative;
 
-			&:not(:last-child) {
-				margin-right: 30px;
-			}
+			margin-bottom: 0;
 
 			@include mobile {
+				width: 220px;
+				
 				&:not(:last-child) {
+					margin-right: 0;
+				}
+			}
+
+			@include tablet {
+				width: 230px;
+			}
+
+			@include medium {
+				width: auto;
+
+				&:not(:nth-child(3n)) {
+					margin-right: 0;
+				}
+			}
+
+			@include desctop {
+				width: auto;
+
+				&:not(:nth-child(3n)),
+				&:not(:nth-child(4n)) {
 					margin-right: 0;
 				}
 			}

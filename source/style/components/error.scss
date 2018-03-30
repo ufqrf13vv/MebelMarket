@@ -22,7 +22,7 @@
 
 		text-align: center;
 
-		@include mobile {
+		@include small_mobile {
 			padding: 15px;
 
 			font-size: 26px;
@@ -52,7 +52,7 @@
 			top: -20px;
 			right: -130px;
 
-			@include mobile {
+			@include small_mobile {
 				display: none;	
 			}
 		}

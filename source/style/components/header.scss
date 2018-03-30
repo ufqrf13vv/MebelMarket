@@ -10,7 +10,7 @@
 		justify-content: space-between;
 		align-items: center;
 
-		@include mobile {
+		@include small_mobile {
 			flex-direction: column;
 		}
 
@@ -30,9 +30,13 @@
 	&__links {
 		display: flex;
 
-		@include mobile {
+		@include small {
 			flex-direction: column;
 
+			margin-bottom: 15px;
+		}
+
+		@include mobile {
 			margin-bottom: 15px;
 		}
 
@@ -54,9 +58,15 @@
 
 		color: $black;
 
-		@include mobile {
+		@include small {
 			&:not(:last-child) {
 				margin-bottom: 15px;
+			}
+		}
+
+		@include mobile {
+			&:not(:last-child) {
+				margin-right: 15px;
 			}
 		}
 
@@ -132,7 +142,7 @@
 	&__contacts {
 		display: flex;
 
-		@include mobile {
+		@include small_mobile {
 			flex-direction: column;
 		}
 
@@ -237,7 +247,7 @@
 	&__menu {
 		display: flex;
 
-		@include mobile {
+		@include small_mobile {
 			margin: 15px 0;
 		}
 

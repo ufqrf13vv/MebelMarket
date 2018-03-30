@@ -9,7 +9,7 @@
 
 		color: $black;
 
-		@include mobile {
+		@include small_mobile {
 			width: 100%;
 			
 			padding: 10px 115px 10px 10px;	

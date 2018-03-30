@@ -10,7 +10,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@include mobile {
+		@include small_mobile {
 			flex-direction: column;
 			align-items: center;
 		}
@@ -31,14 +31,14 @@
 
 		width: 350px;
 
-		@include mobile {
-			width: auto;
+		@include small_mobile {
+			width: 80%;
 
 			margin-bottom: 20px;	
 		}
 
 		@include tablet {
-			width: 350px;
+			width: 70%;
 
 			margin-bottom: 20px;	
 		}

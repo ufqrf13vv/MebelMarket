@@ -16,9 +16,7 @@
 
 		border: 1px solid $grey;
 
-		@include mobile {
-			width: 100%;
-
+		@include small_mobile {
 			margin-right: 0;	
 		}
 	}

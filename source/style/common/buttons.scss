@@ -20,7 +20,7 @@
 		color: $white;
 		background: $orange;
 
-		@include mobile {
+		@include small_mobile {
 			width: 100%;	
 		}
 	}

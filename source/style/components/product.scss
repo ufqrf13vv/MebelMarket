@@ -3,7 +3,7 @@
 	&__main {
 		display: flex;
 
-		@include mobile {
+		@include small_mobile {
 			flex-direction: column;	
 		}
 
@@ -28,6 +28,8 @@
 	}
 
 	&__image {
+		display: block;
+		
 		height: 320px;
 
 		border: 1px solid $grey;
@@ -38,7 +40,7 @@
 		margin-right: 30px;
 		margin-bottom: 20px;
 
-		@include mobile {
+		@include small_mobile {
 			margin-right: 0;	
 		}
 
@@ -170,7 +172,7 @@
 		display: flex;
 		justify-content: space-between;
 
-		@include mobile {
+		@include small_mobile {
 			flex-direction: column;	
 		}
 
@@ -189,7 +191,7 @@
 		display: flex;
 		flex-direction: column;
 
-		@include mobile {
+		@include small_mobile {
 			margin-bottom: 15px;	
 		}
 

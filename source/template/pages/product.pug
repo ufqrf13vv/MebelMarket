@@ -9,14 +9,14 @@ block content
 
 		.product
 			.product__main
-				.product__gallery
-					.product__image#product-image
+				.product__gallery#lightgallery
+					a.product__image#product-image(href="/assets/img/product-2.png", data-lightbox="image-1", data-title="Title")
 						.catalog__item-icon.catalog__item-icon--discount.product__icon 40%
 						img(src="/assets/img/product-2.png")
 					.product__thumbs
-						.product__thumbs-item.product__thumbs-item--active
+						a.product__thumbs-item.product__thumbs-item--active(href="/assets/img/product-1.jpg", data-lightbox="roadtrip")
 							img(src="/assets/img/product-1.jpg")
-						.product__thumbs-item
+						a.product__thumbs-item(href="/assets/img/product-2.png", data-lightbox="roadtrip")
 							img(src="/assets/img/product-2.png")
 				.product__info
 					.product__title Кресло 64*60*73 см.

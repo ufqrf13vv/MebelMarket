@@ -4,6 +4,10 @@
 
 	margin-bottom: 30px;
 
+	@include mobile {
+		justify-content: space-around;	
+	}
+
 	@include tablet {
 		justify-content: space-around;
 	}
@@ -20,8 +24,12 @@
 
 		margin-bottom: 30px;
 
-		@include mobile {
+		@include small {
 			width: auto;
+		}
+
+		@include mobile {
+			width: calc(50% - 20px);
 		}
 
 		@include tablet {
@@ -80,12 +88,8 @@
 
 			margin-bottom: 0;
 
-			@include mobile {
-				width: 220px;
-				
-				&:not(:last-child) {
-					margin-right: 0;
-				}
+			@include small_mobile {
+				display: none;
 			}
 
 			@include tablet {
@@ -282,7 +286,7 @@
 
 		position: relative;
 
-		@include mobile {
+		@include small_mobile {
 			width: 100%;
 
 			&:not(:last-child) {
@@ -294,10 +298,14 @@
 			width: 66%;	
 		}
 
+		&:hover {
+			opacity: .7;
+		}
+
 		&--small {
 			width: 30%;
 
-			@include mobile {
+			@include small_mobile {
 				width: 100%;	
 			}
 
@@ -328,13 +336,11 @@
 			color: $white;
 			background: rgba(247, 158, 55, 0.9);
 
-			text-decoration: none;
-
 			position: absolute;
 			left: 15px;
 			bottom: 15px;
 
-			@include mobile {
+			@include small_mobile {
 				width: auto;
 
 				font-size: 18px;	
@@ -388,8 +394,8 @@
 		background: $orange;
 		border-radius: 4px;
 
-		@include mobile {
-			width: 100%;
+		@include small_mobile {
+			width: 80%;
 
 			text-align: center;
 

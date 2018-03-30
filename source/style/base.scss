@@ -41,7 +41,7 @@ img {
 	padding: 0 15px;
 
 	@include mobile {
-		width: 320px;
+		max-width: 680px;
 	}
 
 	@include tablet {
@@ -77,4 +77,10 @@ img {
 
 a:hover {
 	text-decoration: none;
+}
+
+.link {
+	text-decoration: none;
+
+	opacity: .7;
 }

@@ -5,6 +5,18 @@
 
 		border-collapse: collapse;
 
+		&-name {
+			display: none;
+
+			@include small_mobile {
+				display: block;
+
+				text-decoration: none;
+
+				color: $blue;
+			}
+		}
+
 		&-thead {
 			display: flex;
 			flex-direction: column;
@@ -26,8 +38,10 @@
 			border-left: 1px solid $grey;
 			border-top: 1px solid $grey;
 
-			@include mobile {
-				font-size: 12px;	
+			@include small_mobile {
+				font-size: 12px;
+
+				padding: 5px;
 			}
 
 			&:last-child {
@@ -56,6 +70,10 @@
 			padding: 19px 15px;
 
 			text-align: center;
+
+			@include small_mobile {
+				padding: 5px;	
+			}
 			
 			&:nth-child(n+2) {
 				border-top: 1px solid $grey;
@@ -70,6 +88,14 @@
 				
 				padding-top: 0;
 				padding-bottom: 30px;
+
+				@include small_mobile {
+					background: $white;
+
+					padding: 7px 5px;
+
+					border-top: 1px solid $grey;
+				}
 			}
 
 			&--right {
@@ -78,10 +104,22 @@
 
 			&--first {
 				padding-left: 0;
+
+				@include small_mobile {
+					padding-left: 5px;
+
+					border-left: 1px solid $grey;
+				}
 			}
 
 			&--last {
 				padding-right: 0;
+
+				@include mobile {
+					padding-right: 5px;	
+
+					border-right: 1px solid $grey;
+				}
 			}
 		}
 	}

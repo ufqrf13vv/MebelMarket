@@ -3,16 +3,14 @@
 
 	position: relative;
 
-	@include mobile {
+	@include small_mobile {
 		height: 40px;
 
-		border-bottom: 1px solid $grey;	
+		border-bottom: 1px solid $grey;
 	}
 
 	&__burger {
-
-		@include mobile {
-		    width: 25px;
+		width: 25px;
     		height: 25px;
 
     		margin-left: 10px;
@@ -23,7 +21,6 @@
 			& > svg {
 				fill: $orange;
 			}
-		}
 
 		@include tablet {
 			display: none;	
@@ -34,12 +31,12 @@
 		display: flex;
 		justify-content: space-between;
 
-		@include mobile {
+		@include small_mobile {
 			display: none;
 			
 			flex-direction: column;
 
-			width: 320px;
+			width: calc(100% - 40px);
 
 			background: $white;
 			border: 1px solid $grey;
@@ -47,7 +44,7 @@
 			position: absolute;
 			top: 40px;
 
-			z-index: 10;
+			z-index: 20;
 		}
 
 		@include tablet {
@@ -67,7 +64,7 @@
 
 		list-style: none;
 
-		@include mobile {
+		@include small_mobile {
 			flex-direction: column;	
 		}
 
@@ -78,7 +75,7 @@
 
 	&__item {
 
-		@include mobile {
+		@include small_mobile {
 			padding: 10px 15px;
 		}
 

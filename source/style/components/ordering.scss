@@ -1,7 +1,7 @@
 .ordering {
 	justify-content: space-between;
 
-	@include mobile {
+	@include small_mobile {
 		flex-direction: column;	
 	}
 
@@ -11,7 +11,7 @@
 
 	&__main {
 
-		@include mobile {
+		@include small_mobile {
 			width: auto;	
 		}
 
@@ -26,7 +26,7 @@
 
 		background: $white;
 
-		@include mobile {
+		@include small_mobile {
 			margin-bottom: 20px;	
 		}
 
@@ -70,7 +70,7 @@
 	&__block {
 		padding: 27px 30px;
 
-		@include mobile {
+		@include small_mobile {
 			padding: 10px;	
 		}
 
@@ -91,7 +91,7 @@
 		&--row {
 			display: flex;
 
-			@include mobile {
+			@include small_mobile {
 				flex-direction: column;	
 			}
 

@@ -17,7 +17,7 @@ block content
 				.filter__aside-wrapper
 					.filter__block
 						.filter__title Мягкая мебель
-						ul.filter__list
+						ul.filter__list.filter__list--small
 							li.filter__item.filter__item--active
 								a.filter__link(href="#") Мягкие диваны и кушетки
 					.filter__block
@@ -31,15 +31,15 @@ block content
 			.filter__catalog
 				.catalog__novelties
 					.catalog__novelty-row
-						.catalog__novelty(style="background: url('../assets/img/nov-1.jpg') no-repeat 0 0; background-size: cover;")
-							a.catalog__novelty-desc(href="#") Новое поступление гарнитуров от 25 000 руб.
-						.catalog__novelty.catalog__novelty--small(style="background: url('../assets/img/nov-2.jpg') no-repeat 0 0; background-size: cover;")
-							a.catalog__novelty-desc.catalog__novelty-desc--small(href="#") Новое поступление гарнитуров от 25 000 руб.
+						a.catalog__novelty(href="#", style="background: url('../assets/img/nov-1.jpg') no-repeat 0 0; background-size: cover;")
+							.catalog__novelty-desc Новое поступление гарнитуров от 25 000 руб.
+						a.catalog__novelty.catalog__novelty--small(href="#", style="background: url('../assets/img/nov-2.jpg') no-repeat 0 0; background-size: cover;")
+							.catalog__novelty-desc.catalog__novelty-desc--small Новое поступление гарнитуров от 25 000 руб.
 					.catalog__novelty-row
-						.catalog__novelty.catalog__novelty--small(style="background: url('../assets/img/nov-3.jpg') no-repeat 0 0; background-size: cover;")
-							a.catalog__novelty-desc.catalog__novelty-desc--small(href="#") Новое поступление гарнитуров от 25 000 руб.
-						.catalog__novelty(style="background: url('../assets/img/nov-4.jpg') no-repeat 0 0; background-size: cover;")
-							a.catalog__novelty-desc(href="#") Новое поступление гарнитуров от 25 000 руб.
+						a.catalog__novelty.catalog__novelty--small(href="#", style="background: url('../assets/img/nov-3.jpg') no-repeat 0 0; background-size: cover;")
+							.catalog__novelty-desc.catalog__novelty-desc--small Новое поступление гарнитуров от 25 000 руб.
+						a.catalog__novelty(href="#", style="background: url('../assets/img/nov-4.jpg') no-repeat 0 0; background-size: cover;")
+							.catalog__novelty-desc Новое поступление гарнитуров от 25 000 руб.
 				h2.main-title.main-title--black Лидеры продаж
 				+catalogItems(catalogItems, iconsLeader, 'catalog__item--filter')
 				.catalog__footer

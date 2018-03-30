@@ -5,7 +5,7 @@
 
 		padding: 28px 0;
 
-		@include mobile {
+		@include small_mobile {
 			display: none;	
 		}
 	}

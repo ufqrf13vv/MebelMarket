@@ -9,15 +9,29 @@ block content
 
 		.product
 			.product__main
-				.product__gallery#lightgallery
-					a.product__image#product-image(href="/assets/img/product-2.png", data-lightbox="image-1", data-title="Title")
-						.catalog__item-icon.catalog__item-icon--discount.product__icon 40%
-						img(src="/assets/img/product-2.png")
-					.product__thumbs
-						a.product__thumbs-item.product__thumbs-item--active(href="/assets/img/product-1.jpg", data-lightbox="roadtrip")
+				.product__gallery
+					.product__image-slider.slider-for
+						a.product__image(href="/assets/img/product-3.png" data-lightbox="image-1" data-title="Image-1")
+							.catalog__item-icon.catalog__item-icon--discount.product__icon 40%
+							img(src="/assets/img/product-3.png")
+						a.product__image(href="/assets/img/product-4.png" data-lightbox="image-2" data-title="Image-2")
+							.catalog__item-icon.catalog__item-icon--discount.product__icon 40%
+							img(src="/assets/img/product-4.png")
+						a.product__image(href="/assets/img/product-1.jpg" data-lightbox="image-3" data-title="Image-3")
+							.catalog__item-icon.catalog__item-icon--discount.product__icon 40%
 							img(src="/assets/img/product-1.jpg")
-						a.product__thumbs-item(href="/assets/img/product-2.png", data-lightbox="roadtrip")
-							img(src="/assets/img/product-2.png")
+						a.product__image(href="/assets/img/product-3.png" data-lightbox="image-4" data-title="Image-4")
+							.catalog__item-icon.catalog__item-icon--discount.product__icon 40%
+							img(src="/assets/img/product-3.png")
+					.product__thumbs.slider-nav
+						.product__thumbs-item
+							img(src="/assets/img/product-3.png")
+						.product__thumbs-item
+							img(src="/assets/img/product-4.png")
+						.product__thumbs-item
+							img(src="/assets/img/product-1.jpg")
+						.product__thumbs-item
+							img(src="/assets/img/product-3.png")
 				.product__info
 					.product__title Кресло 64*60*73 см.
 					table.product__props
